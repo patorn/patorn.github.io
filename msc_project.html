@@ -3,606 +3,419 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Patorn</title>
+  <title>Detection of topic structure with a network analysis approach</title>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/freelancer.css" rel="stylesheet">
+  <link href="css/msc_project.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <!-- Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
 </head>
 
-<body id="page-top" class="index">
+  <body id="page-top" class="index">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">Patorn</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Detection of topic structure with a network analysis approach</h2>
+            <hr>
+          </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <td><h5>Number of Documents</h5></td>
+                  <td colspan=6><h5>9086</h5></td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td colspan=6><h5>Experiment Setup</h5></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Model</td>
+                  <td>Modularity</td>
+                  <td>Modularity + Noun Chunk</td>
+                  <td>LDA</td>
+                  <td>LDA + Cosine + Modularity (LCM)</td>
+                  <td>LDA + Hellinger + Modularity (LHM)</td>
+                <tr>
+                  <td>Document Representation</td>
+                  <td>TF-IDF Vector</td>
+                  <td>Noun Chunk Vector</td>
+                  <td>Topic Probability Distribution Vector</td>
+                  <td>Topic Probability Distribution Vector</td>
+                  <td>Topic Probability Distribution Vector</td>
+                </tr>
+                <tr>
+                  <td>Node</td>
+                  <td>Document</td>
+                  <td>Document</td>
+                  <td>Document</td>
+                  <td>Document</td>
+                  <td>Document</td>
+                </tr>
+                <tr>
+                  <td>Edge</td>
+                  <td>Cosine similarity</td>
+                  <td>Cosine similarity</td>
+                  <td>Cosine similarity</td>
+                  <td>Cosine similarity</td>
+                  <td>Hellinger Distance</td>
+                </tr>
+                <tr>
+                  <td>Community Detection</td>
+                  <td>Louvain Modularity</td>
+                  <td>Louvain Modularity</td>
+                  <td>Highest Probability</td>
+                  <td>Louvain Modularity</td>
+                  <td>Louvain Modularity</td>
+                </tr>
+                <tr>
+                  <td>Number of Topics</td>
+                  <td>227</td>
+                  <td>TBA</td>
+                  <td>226</td>
+                  <td>137</td>
+                  <td>138</td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <td colspan=6><h5>Network Properties</h5></td>
+                </tr>
+              </thead>
+              </tbody>
+                <tr>
+                  <td>Nodes</td>
+                  <td>7814</td>
+                  <td>-</td>
+                  <td>7925</td>
+                  <td>7925</td>
+                  <td>7582</td>
+                </tr>
+                <tr>
+                  <td>Edges</td>
+                  <td>98164</td>
+                  <td>-</td>
+                  <td>221933</td>
+                  <td>221933</td>
+                  <td>111082</td>
+                </tr>
+                <tr>
+                  <td>Diameter</td>
+                  <td>15</td>
+                  <td>-</td>
+                  <td>22</td>
+                  <td>22</td>
+                  <td>16</td>
+                </tr>
+                <tr>
+                  <td>Largest Connected Components</td>
+                  <td>7356</td>
+                  <td>-</td>
+                  <td>7549</td>
+                  <td>7549</td>
+                  <td>7300</td>
+                </tr>
+                <tr>
+                  <td>Avg Shortest Path</td>
+                  <td>5.1</td>
+                  <td>-</td>
+                  <td>5.95</td>
+                  <td>5.95</td>
+                  <td>5.37</td>
+                </tr>
+                <tr>
+                  <td>Avg Degree</td>
+                  <td>25.12</td>
+                  <td>-</td>
+                  <td>56</td>
+                  <td>56</td>
+                  <td>29.30</td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <td colspan=6><h5>Evaluation</h5></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Modularity</td>
+                  <td>0.8243</td>
+                  <td>-</td>
+                  <td>0.6819</td>
+                  <td>0.7231</td>
+                  <td>0.7299</td>
+                </tr>
+                <tr>
+                  <td>Overall Similarity</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Topic size chart</h3>
+            <hr>
+            <h4>Modularity</h4>
+            <p>
+              <a href="msc_project/size_chart_net.png" target="_blank">
+                <img src="msc_project/size_chart_net.png" width="100%">
+              </a>
+              Documents not belong to any topic: 1272
+            </p>
+          </div>
+          <div class="col-xs-12">
+            <h4>LDA</h4>
+            <p>
+              <a href="msc_project/size_chart_lda.png" target="_blank">
+                <img src="msc_project/size_chart_lda.png" width="100%">
+              </a>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Patorn Utenpattanun</span>
-                        <hr class="star-light">
-                        <span class="skills">Web Developer</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+              Documents not belong to any topic: 0
+            </p>
+          </div>
+          <div class="col-xs-12">
+            <h4>LDA + Cosine + Modularity</h4>
+            <p>
+              <a href="msc_project/size_chart_lda_cosine.png" target="_blank">
+                <img src="msc_project/size_chart_lda_cosine.png" width="100%">
+              </a>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/matholia.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/foodrunner.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/lelapin.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/graphicsrf.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/foodbyphone.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/whiteboard.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/greenpeace.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
+              Documents not belong to any topic: 1161
+            </p>
+          </div>
+          <div class="col-xs-12">
+            <h4>LDA + Hellinger + Modularity</h4>
+            <p>
+              <a href="msc_project/size_chart_lda_hellinger.png" target="_blank">
+                <img src="msc_project/size_chart_lda_hellinger.png" width="100%">
+              </a>
+
+              Documents not belong to any topic: 1504
+            </p>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Heatmap of Similarities between Modularity and LCM</h3>
+            <a href="msc_project/heatmap_lda_cosine.png" target="_blank">
+              <img src="msc_project/heatmap_lda_cosine.png" width="100%">
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Comparison of topics between Modularity and LCM: Sort by Topic Size</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <td>#</td>
+                  <td>Modularity Label</td>
+                  <td>Modularity Size</td>
+                  <td>Modularity Keywords</td>
+                  <td>LCM Label</td>
+                  <td>LCM Size</td>
+                  <td>LCM Keywords</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>6</td><td>612</td><td>'g', 'season', 'mourinho', 'warnock', 'arteta', 'ranieri', 'rodger', 'pochettino', 'thai', 'morri'</td><td>6</td><td>857</td><td>'g', 'season', 'kooiman', 'temperley', 'pite', 'mourinho', 'knox', 'itoj', 'curri', 'warnock'</td></tr>
+                <tr><td>2</td><td>170</td><td>494</td><td>'fundrais', 'dr', 'fundrais', 'therapist', 'oxygen', 'discharg', 'anxieti', 'anxieti', 'diabet', 'suicid'</td><td>87</td><td>805</td><td>'gingham', 'necklac', 'dada', 'dragon', 'stubbl', 'homer', 'trevelyan', 'kenzo', 'frodo', 'wed'</td></tr>
+                <tr><td>3</td><td>89</td><td>487</td><td>'antonia', 'cv', 'disabl', 'talktalk', '7eleven', 'ucu', 'binoch', 'ldc', 'disabl', 'abort'</td><td>73</td><td>711</td><td>'vegan', 'potti', 'tattoo', 'alix', 'rat', 'valentino', 'chat', 'antonia', 'therapist', 'throne'</td></tr>
+                <tr><td>4</td><td>86</td><td>449</td><td>'hs2', 'siem', 'tobacco', 'tobacco', 'tax', 'hs2', 'cocoa', 'depp', 'wage', 'tax'</td><td>58</td><td>680</td><td>'mdb', 'fundrais', 'apprenticeship', 'saudi', 'prison', 'prison', 'fundrais', 'snowden', 'prison', 'disabl'</td></tr>
+                <tr><td>5</td><td>218</td><td>442</td><td>'churchil', 'ttip', 'ttip', 'sharia', 'export', 'ceta', 'enrol', 'rm', 'ehic', 'patten'</td><td>136</td><td>567</td><td>'sock', 'parent', 'churchil', 'harari', 'doomerang', 'tran', 'ttip', 'ttip', 'abort', 'dutert'</td></tr>
+                <tr><td>6</td><td>11</td><td>396</td><td>'homeless', 'mayweath', 'leasehold', 'muslim', 'council', 'homeless', 'parish', 'tfl', 'ricu', 'mosqu'</td><td>13</td><td>458</td><td>'ridsdal', 'curfew', 'bundi', 'uae', 'ghomeshi', 'wolverin', 'ratner', 'freita', 'bahá’í', 'lupidi'</td></tr>
+                <tr><td>7</td><td>207</td><td>376</td><td>'soundcloud', 'wed', 'pite', 'lassnig', 'art', 'dane', 'festiv', 'eavi', 'franzen', 'ipod'</td><td>79</td><td>383</td><td>'invoic', 'bauer', 'soundcloud', 'barclay', 'mortgag', 'tobacco', 'solar', 'poverti', 'mortgag', 'gannett'</td></tr>
+                <tr><td>8</td><td>96</td><td>318</td><td>'mdb', 'pollut', 'coral', 'seafood', 'reef', 'batteri', 'belgrad', 'csiro', 'acidif', 'plastic'</td><td>76</td><td>273</td><td>'eavi', 'blair', 'rotherham', 'ehic', 'patten', 'displac', 'refuge', 'bower', 'ttip', 'ttip'</td></tr>
+                <tr><td>9</td><td>81</td><td>313</td><td>'tuesday', 'friday', 'friday', 'friday', 'wednesday', 'wednesday', 'wednesday', 'wednesday', 'tuesday', 'tuesday'</td><td>99</td><td>263</td><td>'homeless', 'palmer', 'sharia', 'refuge', 'tax', 'refuge', 'guthri', 'wage', 'agedcar', 'seat'</td></tr>
+                <tr><td>10</td><td>97</td><td>298</td><td>'mnuchin', 'perez', 'thiel', 'obituari', 'gun', 'gun', 'rubio', 'sarandon', 'pac', 'meme'</td><td>108</td><td>255</td><td>'obituari', 'gun', 'rubio', 'sarandon', 'pac', 'ulay', 'meme', 'rubio', 'gold', 'rubio'</td></tr>
+                <tr><td>11</td><td>216</td><td>275</td><td>'librari', 'dragon', 'bee', 'tip', 'fawcettflatsfriday', 'cat', 'bangladesh', 'itch', 'heel', 'plot'</td><td>90</td><td>232</td><td>'hs2', 'reef', 'contrail', 'batteri', 'acidif', 'hyperloop', 'reef', 'flint', 'corbi', 'energi'</td></tr>
+                <tr><td>12</td><td>49</td><td>257</td><td>'saudi', 'journalist', 'refuge', 'humanitarian', 'refuge', 'jacket', 'refuge', 'saudi', 'humanitarian', 'airdrop'</td><td>121</td><td>202</td><td>'galá', 'spotifi', 'mustonen', 'punk', 'spotifi', 'skepta', 'prometheu', 'donen', 'andsn', 'ginsberg'</td></tr>
+                <tr><td>13</td><td>172</td><td>253</td><td>'tattoo', 'ridsdal', 'valentino', 'masturb', 'bundi', 'dog', 'porn', 'sulli', 'kincora', 'lyst'</td><td>67</td><td>188</td><td>'hatoum', 'barrow', 'thorp', 'mcdowel', 'hodgkin', 'fisk', 'grotto', 'kwouk', 'binchi', 'whicker'</td></tr>
+                <tr><td>14</td><td>178</td><td>245</td><td>'password', 'snowden', 'abc', 'curri', 'raptor', 'warcraft', 'embarrass', 'guthri', 'spur', 'ling'</td><td>97</td><td>171</td><td>'pelé', 'warcraft', 'toy', 'halloween', 'hathaway', 'lego', 'comic', 'wareheim', 'mcavoy', 'wright'</td></tr>
+                <tr><td>15</td><td>191</td><td>200</td><td>'cannabi', 'prison', 'prison', 'pelé', 'antibiot', 'prison', 'prison', 'prison', 'prison', 'ratner'</td><td>124</td><td>168</td><td>'ree', 'pcc', 'antisemit', 'plaid', 'plaid', 'council', 'scottish', 'labour', 'livingston', 'devolut'</td></tr>
+                <tr><td>16</td><td>83</td><td>178</td><td>'parent', 'tran', 'nolan', 'hyman', 'unrwa', 'teacher', 'duckworth', 'guardianteach', 'breakfast', 'school'</td><td>70</td><td>125</td><td>'tyre', 'crm', 'cv', 'data', 'adblock', 'hyperloop', 'quantum', 'tampon', 'export', 'morag'</td></tr>
+                <tr><td>17</td><td>36</td><td>160</td><td>'bbc', 'bbc', 'bbc', 'bbc', 'recip', 'bbc', 'bbc', 'bbc', 'grundi', 'birmingham'</td><td>128</td><td>121</td><td>'hertz', 'bbc', 'bbc', 'hertz', 'bbc', 'bbc', 'bbc', 'bbc', 'bbc', 'birmingham'</td></tr>
+                <tr><td>18</td><td>164</td><td>141</td><td>'pension', 'steel', 'pension', 'glyphos', 'bh', 'tata', 'bh', 'tata', 'asda', 'bh'</td><td>56</td><td>113</td><td>'huel', 'falafel', 'garden', 'turmer', 'garden', 'garden', 'miso', 'recip', 'egg', 'food'</td></tr>
+                <tr><td>19</td><td>186</td><td>135</td><td>'drone', 'mansoor', 'iceland', 'interpret', 'uber', 'hekmatyar', 'ev', 'rosberg', 'drone', 'uber'</td><td>16</td><td>90</td><td>'mathew', 'gayl', 'compton', 'stoke', 'shanaka', 'bairstow', 'panesar', 'wicket', 'wicket', 'cook'</td></tr>
+                <tr><td>20</td><td>152</td><td>134</td><td>'itoj', 'ebner', 'hayn', 'hayn', 'corbisiero', '•', 'widn', 'haggerti', 'mcshane', '•'</td><td>86</td><td>79</td><td>'leasehold', 'council', 'homeless', 'shoe', 'cashback', 'talktalk', 'tfl', 'rent', 'skoda', 'homeless'</td></tr>
+                <tr><td>21</td><td>215</td><td>132</td><td>'hertz', 'bauer', 'hertz', 'eurovis', 'tudor', 'scilli', 'cunk', 'weinstein', 'deen', 'peston'</td><td>81</td><td>76</td><td>'antibiot', 'oxygen', 'mayweath', 'fistula', 'baka', 'mbsr', 'diabet', 'vertigo', 'transplant', 'mayweath'</td></tr>
+                <tr><td>22</td><td>194</td><td>114</td><td>'schipper', 'diamond', 'hyperloop', 'knox', 'hyperloop', 'mcilroy', 'gasol', 'spieth', 'clara', 'pendleton'</td><td>104</td><td>76</td><td>'gchq', 'lyst', 'app', 'instagram', 'mulkentin', 'møller', 'browser', 'tech', 'thiel', 'kadyrov'</td></tr>
+                <tr><td>23</td><td>125</td><td>110</td><td>'mathew', 'gayl', 'gayl', 'compton', 'stoke', 'panesar', 'cemeteri', 'shanaka', 'cemeteri', 'bairstow'</td><td>72</td><td>70</td><td>'wednesday', 'wednesday', 'wednesday', 'wednesday', 'djokov', 'rosberg', 'beden', 'mladenov', 'murray', 'mercuri'</td></tr>
+                <tr><td>24</td><td>76</td><td>104</td><td>'vegan', 'vegan', 'vegan', 'turmer', 'embryo', 'miso', 'egg', 'skin', 'chees', 'pastri'</td><td>31</td><td>65</td><td>'noseband', 'fallon', 'nyquist', 'race', 'allweath', 'gosden', 'derbi', 'derbi', 'frankel', 'ride'</td></tr>
+                <tr><td>25</td><td>92</td><td>102</td><td>'barrow', 'langley', 'award', 'morag', 'noorjji', 'moya', 'salmon', 'angharad', 'koalapak', 'roasteri'</td><td>132</td><td>58</td><td>'cannabi', 'binoch', 'prison', 'refn', 'farrow', 'drug', 'sarandon', 'prison', 'drug', 'cannabi'</td></tr>
+                <tr><td>26</td><td>150</td><td>98</td><td>'fallon', 'nyquist', 'allweath', 'gosden', 'payn', 'derbi', 'derbi', 'frankel', 'payn', 'ride'</td><td>68</td><td>56</td><td>'steel', 'airdrop', 'falluja', 'tamkeen', 'tata', 'tata', 'isi', 'steel', 'steel', 'darayya'</td></tr>
+                <tr><td>27</td><td>160</td><td>96</td><td>'garden', 'garden', 'garden', 'ranger', 'eleph', 'ivori', 'indigen', 'squirrel', 'plant', 'rhino'</td><td>40</td><td>49</td><td>'poll', 'muslim', 'khan', 'muslim', 'zylinski', 'ree', 'goldsmith', 'mcgowan', 'vote', 'khan'</td></tr>
+                <tr><td>28</td><td>115</td><td>65</td><td>'tsa', 'spider', 'hedg', 'mh370', 'flight', 'turtl', 'turtl', 'spider', 'chocolat', 'menzio'</td><td>60</td><td>37</td><td>'orgreav', 'polic', 'db', 'junior', 'junior', 'rainsbrook', 'orgreav', 'junior', 'junior', 'junior'</td></tr>
+                <tr><td>29</td><td>117</td><td>55</td><td>'apprenticeship', 'church', 'grotto', 'bt', 'archdioces', 'hitchen', 'bt', 'faith', 'priest', 'bond'</td><td>103</td><td>31</td><td>'bear', 'vang', 'vieng', 'mcmurray', 'mcmurray', 'volcano', 'fort', 'hellisheiði', 'bomb', 'tyre'</td></tr>
+                <tr><td>30</td><td>118</td><td>53</td><td>'tenni', 'djokov', 'beden', 'mauresmo', 'mladenov', 'murray', 'murray', 'murray', 'djokov', 'murray'</td><td>35</td><td>30</td><td>'mh370', 'guam', 'menzio', 'rescreen', 'egyptian', 'passeng', 'helicopt', 'passeng', 'egyptian', 'airport'</td></tr>
+                <tr><td>31</td><td>168</td><td>50</td><td>'wolverin', 'xmen', 'comic', 'helberg', 'florenc', 'preacher', 'superhero', 'dc', 'batman', 'pullman'</td><td>39</td><td>30</td><td>'lamprey', 'leopard', 'crocodil', 'mascara', 'aruba', 'abv', 'cleethorp', 'cabin', 'nile', 'crocodil'</td></tr>
+                <tr><td>32</td><td>211</td><td>43</td><td>'dada', 'poetri', 'poetri', 'greec', 'poem', 'plath’', 'debt', 'debt', 'biennal', 'duffi'</td><td>105</td><td>30</td><td>'osbourn', 'maduro', 'mujica', 'maduro', 'rousseff', 'sebag', 'romanov', 'montefior', 'maduro', 'rio'</td></tr>
+                <tr><td>33</td><td>161</td><td>28</td><td>'debentur', 'ticket', 'ticket', 'crossword', 'resel', 'crossword', 'fashion', 'cryptic', 'crossword', 'ticket'</td><td>27</td><td>28</td><td>'9pm', 'deepcut', 'cruickshank', '9pm', '9pm', 'stauffenberg', '9pm', '9pm', 'biker', 'howlett'</td></tr>
+                <tr><td>34</td><td>112</td><td>21</td><td>'hutterit', 'fpö', 'hofer', 'bellen', 'hofer', 'hofer', 'bellen', 'der', 'fpö', 'der'</td><td>98</td><td>28</td><td>'pollut', 'eastbourn', 'pollut', 'pollut', 'pollut', 'pollut', 'pollut', 'pollut', 'monitor', 'pollut'</td></tr>
+                <tr><td>35</td><td>29</td><td>20</td><td>'rawabi', 'netanyahu', 'palestinian', 'palestinian', 'lieberman', 'hinn', 'hama', 'palestinian', 'gaza', 'isra'</td><td>77</td><td>27</td><td>'cartmel', 'rainbow', 'vivr', 'atalan', 'annigoni', 'roania', 'heresmynumb', 'altess', 'vaquera', 'cottersrock'</td></tr>
+                <tr><td>36</td><td>51</td><td>20</td><td>'aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'dann', 'cabay', 'aug'</td><td>17</td><td>23</td><td>'miso', 'caramelis', 'raspberri', '‘feast’', '‘bloom’', '‘acrobatic’', '‘bold’', 'guardianwit', 'review', 'guardianwit'</td></tr>
+                <tr><td>37</td><td>114</td><td>16</td><td>'bitcoin', 'bitcoin', 'bitcoin', 'bitcoin', 'kabila', 'wright', 'spacey', 'wright', 'bitcoin', 'wright'</td><td>78</td><td>23</td><td>'schipper', 'mcilroy', 'gasol', 'pendleton', 'peati', 'johnsonthompson', 'olymp', 'sayer', 'shields’', 'adlington'</td></tr>
+                <tr><td>38</td><td>144</td><td>12</td><td>'throne', 'jon', '“r', 'tyrel', 'j”', 'sansa', 'dani', 'jaim', 'hodor', 'lyanna'</td><td>30</td><td>22</td><td>'houghton', 'fpö', 'hofer', 'bellen', 'hofer', 'bellen', 'der', 'fpö', 'der', 'der'</td></tr>
+                <tr><td>39</td><td>80</td><td>11</td><td>'chibok', 'chibok', 'haram', 'giwa', 'boko', 'nkeki', 'boko', 'haram', 'chibok', 'boko'</td><td>120</td><td>21</td><td>'bt', 'window', 'window', 'window', 'tablet', 'v8', 'router', 'app', 'upgrad', 'tablet'</td></tr>
+                <tr><td>40</td><td>44</td><td>8</td><td>'ufc', 'mayweath', 'mcgregor', 'ufc', 'editor', 'mcgregor', 'mullin', 'ufc', 'ufc', 'editor'</td><td>84</td><td>19</td><td>'aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'aug', 'knee', 'knee'</td></tr>
+                <tr><td>41</td><td>57</td><td>8</td><td>'3x3', '3x3', '3x3', '3x3', '83', '83', '83', '83', 'grid', 'grid'</td><td>12</td><td>18</td><td>'bha', 'bha', 'bha', 'hekmatyar', 'bha', 'lohn', 'mansoor', 'mansoor', 'firoza', 'bha'</td></tr>
+                <tr><td>42</td><td>141</td><td>8</td><td>'climb', 'climber', 'climber', 'coxsey', 'climber', 'everest', 'everest', 'everest', 'sherpa', 'climb'</td><td>4</td><td>16</td><td>'bbc', 'raid', 'patten', 'bbc', 'bbc', 'brampton', 'bbc', 'tv', 'fraud', 'buffett'</td></tr>
+                <tr><td>43</td><td>33</td><td>7</td><td>'alicia', 'cum', 'celia', 'alicia', 'travi', 'madison', 'nick', 'alicia', 'zombi', 'travi'</td><td>59</td><td>16</td><td>'butler', 'butler', 'arpaio', 'butler', 'butler', 'hellerstein', 'butler', 'butler', 'butler', 'butler'</td></tr>
+                <tr><td>44</td><td>142</td><td>7</td><td>'bha', 'bha', 'bha', 'bha', 'lohn', 'bha', 'lohn', 'bha', 'bha', 'disciplinari'</td><td>101</td><td>14</td><td>'eurovis', 'eurovis', 'attenborough', 'tatar', 'eurovis', 'eurovis', 'eurovis', 'eurovis', 'wingham', 'tatar'</td></tr>
+                <tr><td>45</td><td>155</td><td>7</td><td>'harari', 'robot', 'robot', 'zora', 'robot', 'capit', 'deblieck', 'em', 'ubi', 'robot'</td><td>131</td><td>12</td><td>'greec', 'debt', 'debt', 'tax', 'pitsiorla', 'bailout', 'greec', 'debt', 'creditor', 'greece’'</td></tr>
+                <tr><td>46</td><td>137</td><td>6</td><td>'gustav', 'mattia', 'gustav', 'tremain', 'mattia', 'gustav', 'magnu', 'sofia', 'anton', 'verita'</td><td>10</td><td>11</td><td>'badreddin', 'chibok', 'badreddin', 'chibok', 'nkeki', 'badreddin', 'hezbollah', 'chibok', 'hezbollah', 'boko'</td></tr>
+                <tr><td>47</td><td>176</td><td>6</td><td>'dress', 'yellow', 'yellow', 'dress', 'azaelea', 'carpet', 'ball', 'umpir', 'ref', 'lawri'</td><td>75</td><td>11</td><td>'ioc', 'diack', 'diack', 'reedi', 'olymp', 'athlet', 'iaaf', 'tokyo', 'massata', 'ioc'</td></tr>
+                <tr><td>48</td><td>55</td><td>5</td><td>'anag', 'anag', 'anag', 'anag', 'def', 'def', 'anag', 'd', 'rev', 'meddlesom'</td><td>21</td><td>10</td><td>'leblanc', 'cleese’', 'evan', 'evan', 'evan', 'pollardmansergh', 'evan', 'clarkson', 'clees', 'leblanc'</td></tr>
+                <tr><td>49</td><td>68</td><td>5</td><td>'princ', 'windsor', 'harri', 'hors', 'delud', 'kate', 'tesco', 'pippa', 'enfield', 'fool”'</td><td>34</td><td>9</td><td>'nayfack', 'transgend', 'transgend', 'gopstein', 'transgend', 'lehava', 'student', 'transgend', 'carolina', 'transgend'</td></tr>
+                <tr><td>50</td><td>223</td><td>5</td><td>'ilga', 'lgbti', 'azerbaijan', 'lgbti', 'convict', 'intersex', 'lgbti', 'convict', 'expung', 'homosexu'</td><td>134</td><td>9</td><td>'shoot', 'lightn', 'gun', 'cctvnew', 'boat', 'temperatur', 'storm', 'violenc', 'shipwreck', 'mass'</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Matching network labels with LCM labels.</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <td>Modularity Label</td>
+                  <td>Modularity Size</td>
+                  <td>Modularity Keywords</td>
+                  <td>LCM Label</td>
+                  <td>LCM Size</td>
+                  <td>LCM Keywords</td>
+                  <td>Cosine Similarity</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>6</td><td>612</td><td>'g', 'season', 'mourinho', 'warnock', 'arteta', 'ranieri', 'rodger', 'pochettino', 'thai', 'morri'</td><td>6</td><td>857</td><td>'g', 'season', 'kooiman', 'temperley', 'pite', 'mourinho', 'knox', 'itoj', 'curri', 'warnock'</td><td>0.785680807447</td></tr>
+                <tr><td>170</td><td>494</td><td>'fundrais', 'dr', 'fundrais', 'therapist', 'oxygen', 'discharg', 'anxieti', 'anxieti', 'diabet', 'suicid'</td><td>58</td><td>680</td><td>'mdb', 'fundrais', 'apprenticeship', 'saudi', 'prison', 'prison', 'fundrais', 'snowden', 'prison', 'disabl'</td><td>0.243277072949</td></tr>
+                <tr><td>89</td><td>487</td><td>'antonia', 'cv', 'disabl', 'talktalk', '7eleven', 'ucu', 'binoch', 'ldc', 'disabl', 'abort'</td><td>132</td><td>58</td><td>'cannabi', 'binoch', 'prison', 'refn', 'farrow', 'drug', 'sarandon', 'prison', 'drug', 'cannabi'</td><td>0.166601748078</td></tr>
+                <tr><td>86</td><td>449</td><td>'hs2', 'siem', 'tobacco', 'tobacco', 'tax', 'hs2', 'cocoa', 'depp', 'wage', 'tax'</td><td>99</td><td>263</td><td>'homeless', 'palmer', 'sharia', 'refuge', 'tax', 'refuge', 'guthri', 'wage', 'agedcar', 'seat'</td><td>0.680949354708</td></tr>
+                <tr><td>218</td><td>442</td><td>'churchil', 'ttip', 'ttip', 'sharia', 'export', 'ceta', 'enrol', 'rm', 'ehic', 'patten'</td><td>76</td><td>273</td><td>'eavi', 'blair', 'rotherham', 'ehic', 'patten', 'displac', 'refuge', 'bower', 'ttip', 'ttip'</td><td>0.6621179745</td></tr>
+                <tr><td>11</td><td>396</td><td>'homeless', 'mayweath', 'leasehold', 'muslim', 'council', 'homeless', 'parish', 'tfl', 'ricu', 'mosqu'</td><td>124</td><td>168</td><td>'ree', 'pcc', 'antisemit', 'plaid', 'plaid', 'council', 'scottish', 'labour', 'livingston', 'devolut'</td><td>0.616445789389</td></tr>
+                <tr><td>207</td><td>376</td><td>'soundcloud', 'wed', 'pite', 'lassnig', 'art', 'dane', 'festiv', 'eavi', 'franzen', 'ipod'</td><td>121</td><td>202</td><td>'galá', 'spotifi', 'mustonen', 'punk', 'spotifi', 'skepta', 'prometheu', 'donen', 'andsn', 'ginsberg'</td><td>0.268511018887</td></tr>
+                <tr><td>96</td><td>318</td><td>'mdb', 'pollut', 'coral', 'seafood', 'reef', 'batteri', 'belgrad', 'csiro', 'acidif', 'plastic'</td><td>90</td><td>232</td><td>'hs2', 'reef', 'contrail', 'batteri', 'acidif', 'hyperloop', 'reef', 'flint', 'corbi', 'energi'</td><td>0.449161246325</td></tr>
+                <tr><td>81</td><td>313</td><td>'tuesday', 'friday', 'friday', 'friday', 'wednesday', 'wednesday', 'wednesday', 'wednesday', 'tuesday', 'tuesday'</td><td>70</td><td>125</td><td>'tyre', 'crm', 'cv', 'data', 'adblock', 'hyperloop', 'quantum', 'tampon', 'export', 'morag'</td><td>0.222446461233</td></tr>
+                <tr><td>97</td><td>298</td><td>'mnuchin', 'perez', 'thiel', 'obituari', 'gun', 'gun', 'rubio', 'sarandon', 'pac', 'meme'</td><td>108</td><td>255</td><td>'obituari', 'gun', 'rubio', 'sarandon', 'pac', 'ulay', 'meme', 'rubio', 'gold', 'rubio'</td><td>0.823469721297</td></tr>
+                <tr><td>216</td><td>275</td><td>'librari', 'dragon', 'bee', 'tip', 'fawcettflatsfriday', 'cat', 'bangladesh', 'itch', 'heel', 'plot'</td><td>17</td><td>23</td><td>'miso', 'caramelis', 'raspberri', '‘feast’', '‘bloom’', '‘acrobatic’', '‘bold’', 'guardianwit', 'review', 'guardianwit'</td><td>0.289199522192</td></tr>
+                <tr><td>49</td><td>257</td><td>'saudi', 'journalist', 'refuge', 'humanitarian', 'refuge', 'jacket', 'refuge', 'saudi', 'humanitarian', 'airdrop'</td><td>68</td><td>56</td><td>'steel', 'airdrop', 'falluja', 'tamkeen', 'tata', 'tata', 'isi', 'steel', 'steel', 'darayya'</td><td>0.250069473393</td></tr>
+                <tr><td>172</td><td>253</td><td>'tattoo', 'ridsdal', 'valentino', 'masturb', 'bundi', 'dog', 'porn', 'sulli', 'kincora', 'lyst'</td><td>13</td><td>458</td><td>'ridsdal', 'curfew', 'bundi', 'uae', 'ghomeshi', 'wolverin', 'ratner', 'freita', 'bahá’í', 'lupidi'</td><td>0.355461337537</td></tr>
+                <tr><td>178</td><td>245</td><td>'password', 'snowden', 'abc', 'curri', 'raptor', 'warcraft', 'embarrass', 'guthri', 'spur', 'ling'</td><td>120</td><td>21</td><td>'bt', 'window', 'window', 'window', 'tablet', 'v8', 'router', 'app', 'upgrad', 'tablet'</td><td>0.153355725749</td></tr>
+                <tr><td>191</td><td>200</td><td>'cannabi', 'prison', 'prison', 'pelé', 'antibiot', 'prison', 'prison', 'prison', 'prison', 'ratner'</td><td>132</td><td>58</td><td>'cannabi', 'binoch', 'prison', 'refn', 'farrow', 'drug', 'sarandon', 'prison', 'drug', 'cannabi'</td><td>0.213549638904</td></tr>
+                <tr><td>83</td><td>178</td><td>'parent', 'tran', 'nolan', 'hyman', 'unrwa', 'teacher', 'duckworth', 'guardianteach', 'breakfast', 'school'</td><td>34</td><td>9</td><td>'nayfack', 'transgend', 'transgend', 'gopstein', 'transgend', 'lehava', 'student', 'transgend', 'carolina', 'transgend'</td><td>0.199875117066</td></tr>
+                <tr><td>36</td><td>160</td><td>'bbc', 'bbc', 'bbc', 'bbc', 'recip', 'bbc', 'bbc', 'bbc', 'grundi', 'birmingham'</td><td>128</td><td>121</td><td>'hertz', 'bbc', 'bbc', 'hertz', 'bbc', 'bbc', 'bbc', 'bbc', 'bbc', 'birmingham'</td><td>0.754634441631</td></tr>
+                <tr><td>164</td><td>141</td><td>'pension', 'steel', 'pension', 'glyphos', 'bh', 'tata', 'bh', 'tata', 'asda', 'bh'</td><td>79</td><td>383</td><td>'invoic', 'bauer', 'soundcloud', 'barclay', 'mortgag', 'tobacco', 'solar', 'poverti', 'mortgag', 'gannett'</td><td>0.421713139163</td></tr>
+                <tr><td>186</td><td>135</td><td>'drone', 'mansoor', 'iceland', 'interpret', 'uber', 'hekmatyar', 'ev', 'rosberg', 'drone', 'uber'</td><td>72</td><td>70</td><td>'wednesday', 'wednesday', 'wednesday', 'wednesday', 'djokov', 'rosberg', 'beden', 'mladenov', 'murray', 'mercuri'</td><td>0.226311579944</td></tr>
+                <tr><td>152</td><td>134</td><td>'itoj', 'ebner', 'hayn', 'hayn', 'corbisiero', '•', 'widn', 'haggerti', 'mcshane', '•'</td><td>6</td><td>857</td><td>'g', 'season', 'kooiman', 'temperley', 'pite', 'mourinho', 'knox', 'itoj', 'curri', 'warnock'</td><td>0.327551934464</td></tr>
+                <tr><td>215</td><td>132</td><td>'hertz', 'bauer', 'hertz', 'eurovis', 'tudor', 'scilli', 'cunk', 'weinstein', 'deen', 'peston'</td><td>21</td><td>10</td><td>'leblanc', 'cleese’', 'evan', 'evan', 'evan', 'pollardmansergh', 'evan', 'clarkson', 'clees', 'leblanc'</td><td>0.247716847153</td></tr>
+                <tr><td>194</td><td>114</td><td>'schipper', 'diamond', 'hyperloop', 'knox', 'hyperloop', 'mcilroy', 'gasol', 'spieth', 'clara', 'pendleton'</td><td>78</td><td>23</td><td>'schipper', 'mcilroy', 'gasol', 'pendleton', 'peati', 'johnsonthompson', 'olymp', 'sayer', 'shields’', 'adlington'</td><td>0.429641611775</td></tr>
+                <tr><td>125</td><td>110</td><td>'mathew', 'gayl', 'gayl', 'compton', 'stoke', 'panesar', 'cemeteri', 'shanaka', 'cemeteri', 'bairstow'</td><td>16</td><td>90</td><td>'mathew', 'gayl', 'compton', 'stoke', 'shanaka', 'bairstow', 'panesar', 'wicket', 'wicket', 'cook'</td><td>0.884433277428</td></tr>
+                <tr><td>76</td><td>104</td><td>'vegan', 'vegan', 'vegan', 'turmer', 'embryo', 'miso', 'egg', 'skin', 'chees', 'pastri'</td><td>56</td><td>113</td><td>'huel', 'falafel', 'garden', 'turmer', 'garden', 'garden', 'miso', 'recip', 'egg', 'food'</td><td>0.516573514663</td></tr>
+                <tr><td>92</td><td>102</td><td>'barrow', 'langley', 'award', 'morag', 'noorjji', 'moya', 'salmon', 'angharad', 'koalapak', 'roasteri'</td><td>58</td><td>680</td><td>'mdb', 'fundrais', 'apprenticeship', 'saudi', 'prison', 'prison', 'fundrais', 'snowden', 'prison', 'disabl'</td><td>0.250604804755</td></tr>
+                <tr><td>150</td><td>98</td><td>'fallon', 'nyquist', 'allweath', 'gosden', 'payn', 'derbi', 'derbi', 'frankel', 'payn', 'ride'</td><td>31</td><td>65</td><td>'noseband', 'fallon', 'nyquist', 'race', 'allweath', 'gosden', 'derbi', 'derbi', 'frankel', 'ride'</td><td>0.776822817101</td></tr>
+                <tr><td>160</td><td>96</td><td>'garden', 'garden', 'garden', 'ranger', 'eleph', 'ivori', 'indigen', 'squirrel', 'plant', 'rhino'</td><td>45</td><td>2</td><td>'ebay', 'speci', 'ebay', 'invas', 'speci', 'plant', 'plant', 'salvinia', 'amazon', 'seller'</td><td>0.144337567297</td></tr>
+                <tr><td>115</td><td>65</td><td>'tsa', 'spider', 'hedg', 'mh370', 'flight', 'turtl', 'turtl', 'spider', 'chocolat', 'menzio'</td><td>35</td><td>30</td><td>'mh370', 'guam', 'menzio', 'rescreen', 'egyptian', 'passeng', 'helicopt', 'passeng', 'egyptian', 'airport'</td><td>0.634075139121</td></tr>
+                <tr><td>117</td><td>55</td><td>'apprenticeship', 'church', 'grotto', 'bt', 'archdioces', 'hitchen', 'bt', 'faith', 'priest', 'bond'</td><td>82</td><td>3</td><td>'bianchi', 'church', 'pope', 'mcelwe', 'priest', 'deacon', 'deacon', 'deaco', 'church', 'ordain'</td><td>0.233549683248</td></tr>
+                <tr><td>118</td><td>53</td><td>'tenni', 'djokov', 'beden', 'mauresmo', 'mladenov', 'murray', 'murray', 'murray', 'djokov', 'murray'</td><td>72</td><td>70</td><td>'wednesday', 'wednesday', 'wednesday', 'wednesday', 'djokov', 'rosberg', 'beden', 'mladenov', 'murray', 'mercuri'</td><td>0.656709103303</td></tr>
+                <tr><td>168</td><td>50</td><td>'wolverin', 'xmen', 'comic', 'helberg', 'florenc', 'preacher', 'superhero', 'dc', 'batman', 'pullman'</td><td>11</td><td>4</td><td>'site', 'xmen', 'site', 'preview', 'site', 'site', 'apocalyps', 'aveng', 'florenc', 'preview'</td><td>0.282842712475</td></tr>
+                <tr><td>211</td><td>43</td><td>'dada', 'poetri', 'poetri', 'greec', 'poem', 'plath’', 'debt', 'debt', 'biennal', 'duffi'</td><td>131</td><td>12</td><td>'greec', 'debt', 'debt', 'tax', 'pitsiorla', 'bailout', 'greec', 'debt', 'creditor', 'greece’'</td><td>0.484247998479</td></tr>
+                <tr><td>161</td><td>28</td><td>'debentur', 'ticket', 'ticket', 'crossword', 'resel', 'crossword', 'fashion', 'cryptic', 'crossword', 'ticket'</td><td>133</td><td>6</td><td>'point', 'fashion', '10am11am', 'pure', 'knowadd', 'alwaysadd', 'sometimesadd', 'neveradd', 'pure', 'fashion'</td><td>0.308606699924</td></tr>
+                <tr><td>112</td><td>21</td><td>'hutterit', 'fpö', 'hofer', 'bellen', 'hofer', 'hofer', 'bellen', 'der', 'fpö', 'der'</td><td>30</td><td>22</td><td>'houghton', 'fpö', 'hofer', 'bellen', 'hofer', 'bellen', 'der', 'fpö', 'der', 'der'</td><td>0.930484210398</td></tr>
+                <tr><td>29</td><td>20</td><td>'rawabi', 'netanyahu', 'palestinian', 'palestinian', 'lieberman', 'hinn', 'hama', 'palestinian', 'gaza', 'isra'</td><td>136</td><td>567</td><td>'sock', 'parent', 'churchil', 'harari', 'doomerang', 'tran', 'ttip', 'ttip', 'abort', 'dutert'</td><td>0.0751248226425</td></tr>
+                <tr><td>51</td><td>20</td><td>'aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'dann', 'cabay', 'aug'</td><td>84</td><td>19</td><td>'aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'aug', 'knee', 'knee'</td><td>0.974679434481</td></tr>
+                <tr><td>114</td><td>16</td><td>'bitcoin', 'bitcoin', 'bitcoin', 'bitcoin', 'kabila', 'wright', 'spacey', 'wright', 'bitcoin', 'wright'</td><td>1</td><td>7</td><td>'bitcoin', 'bitcoin', 'wright', 'wright', 'bitcoin', 'bitcoin', 'bitcoin', 'mascot', 'nakamoto', 'bitcoin'</td><td>0.566946709514</td></tr>
+                <tr><td>144</td><td>12</td><td>'throne', 'jon', '“r', 'tyrel', 'j”', 'sansa', 'dani', 'jaim', 'hodor', 'lyanna'</td><td>87</td><td>805</td><td>'gingham', 'necklac', 'dada', 'dragon', 'stubbl', 'homer', 'trevelyan', 'kenzo', 'frodo', 'wed'</td><td>0.0813956927556</td></tr>
+                <tr><td>80</td><td>11</td><td>'chibok', 'chibok', 'haram', 'giwa', 'boko', 'nkeki', 'boko', 'haram', 'chibok', 'boko'</td><td>10</td><td>11</td><td>'badreddin', 'chibok', 'badreddin', 'chibok', 'nkeki', 'badreddin', 'hezbollah', 'chibok', 'hezbollah', 'boko'</td><td>0.636363636364</td></tr>
+                <tr><td>44</td><td>8</td><td>'ufc', 'mayweath', 'mcgregor', 'ufc', 'editor', 'mcgregor', 'mullin', 'ufc', 'ufc', 'editor'</td><td>81</td><td>76</td><td>'antibiot', 'oxygen', 'mayweath', 'fistula', 'baka', 'mbsr', 'diabet', 'vertigo', 'transplant', 'mayweath'</td><td>0.0405553552827</td></tr>
+                <tr><td>57</td><td>8</td><td>'3x3', '3x3', '3x3', '3x3', '83', '83', '83', '83', 'grid', 'grid'</td><td>0</td><td>4</td><td>'3x3', '3x3', '3x3', '3x3', 'grid', 'grid', 'grid', 'grid', 'puzzl', 'puzzl'</td><td>0.707106781187</td></tr>
+                <tr><td>141</td><td>8</td><td>'climb', 'climber', 'climber', 'coxsey', 'climber', 'everest', 'everest', 'everest', 'sherpa', 'climb'</td><td>9</td><td>4</td><td>'climber', 'climber', 'climber', 'everest', 'everest', 'sherpa', 'sherpa', 'everest', 'arnold', 'summit'</td><td>0.707106781187</td></tr>
+                <tr><td>33</td><td>7</td><td>'alicia', 'cum', 'celia', 'alicia', 'travi', 'madison', 'nick', 'alicia', 'zombi', 'travi'</td><td>87</td><td>805</td><td>'gingham', 'necklac', 'dada', 'dragon', 'stubbl', 'homer', 'trevelyan', 'kenzo', 'frodo', 'wed'</td><td>0.0666074863029</td></tr>
+                <tr><td>142</td><td>7</td><td>'bha', 'bha', 'bha', 'bha', 'lohn', 'bha', 'lohn', 'bha', 'bha', 'disciplinari'</td><td>12</td><td>18</td><td>'bha', 'bha', 'bha', 'hekmatyar', 'bha', 'lohn', 'mansoor', 'mansoor', 'firoza', 'bha'</td><td>0.623609564462</td></tr>
+                <tr><td>155</td><td>7</td><td>'harari', 'robot', 'robot', 'zora', 'robot', 'capit', 'deblieck', 'em', 'ubi', 'robot'</td><td>120</td><td>21</td><td>'bt', 'window', 'window', 'window', 'tablet', 'v8', 'router', 'app', 'upgrad', 'tablet'</td><td>0.0824786098842</td></tr>
+                <tr><td>137</td><td>6</td><td>'gustav', 'mattia', 'gustav', 'tremain', 'mattia', 'gustav', 'magnu', 'sofia', 'anton', 'verita'</td><td>87</td><td>805</td><td>'gingham', 'necklac', 'dada', 'dragon', 'stubbl', 'homer', 'trevelyan', 'kenzo', 'frodo', 'wed'</td><td>0.0719443078836</td></tr>
+                <tr><td>176</td><td>6</td><td>'dress', 'yellow', 'yellow', 'dress', 'azaelea', 'carpet', 'ball', 'umpir', 'ref', 'lawri'</td><td>6</td><td>857</td><td>'g', 'season', 'kooiman', 'temperley', 'pite', 'mourinho', 'knox', 'itoj', 'curri', 'warnock'</td><td>0.0557819837946</td></tr>
+                <tr><td>55</td><td>5</td><td>'anag', 'anag', 'anag', 'anag', 'def', 'def', 'anag', 'd', 'rev', 'meddlesom'</td><td>117</td><td>7</td><td>'anag', 'religion', 'anag', 'anag', 'anag', 'def', 'def', 'anag', 'd', 'christian'</td><td>0.845154254729</td></tr>
+                <tr><td>68</td><td>5</td><td>'princ', 'windsor', 'harri', 'hors', 'delud', 'kate', 'tesco', 'pippa', 'enfield', 'fool”'</td><td>104</td><td>76</td><td>'gchq', 'lyst', 'app', 'instagram', 'mulkentin', 'møller', 'browser', 'tech', 'thiel', 'kadyrov'</td><td>0.0512989176043</td></tr>
+                <tr><td>223</td><td>5</td><td>'ilga', 'lgbti', 'azerbaijan', 'lgbti', 'convict', 'intersex', 'lgbti', 'convict', 'expung', 'homosexu'</td><td>13</td><td>458</td><td>'ridsdal', 'curfew', 'bundi', 'uae', 'ghomeshi', 'wolverin', 'ratner', 'freita', 'bahá’í', 'lupidi'</td><td>0.062690756929</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Visualization of networks</h3>
+            <ul>
+              <li>Node size = no of articles</li>
+              <li>Node label = Modularity label</li>
+              <li>The digit on the label indicates that the LCM topic is most similar to the existing modularity topic in the network, eg. 216.3 meaning this is the third time of modularity topic 216 to match LCM topic.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <p>
+              Modularity
+              <a href="msc_project/com_net.png" target="_blank">
+                <img src="msc_project/com_net.png" width="100%">
+              </a>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <p>
+              LDA
+              <a href="msc_project/com_lda.png" target="_blank">
+                <img src="msc_project/com_lda.png" width="100%">
+              </a>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <p>
+              LCM
+              <a href="msc_project/com_cosine_lda.png" target="_blank">
+                <img src="msc_project/com_cosine_lda.png" width="100%">
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>I have been developing several applications serving many purposes, for instance, API, web apps, and marketing sites. I was involved in all parts of the development process, from writing a proposal to deploying the projects. I also coach my teammates and advice them on various topics, such as, how to structure code, which plug-ins to use, and how things should work from user experience perspectives</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>I am fluent in Ruby, SQL, CSS and Javascript. Adhering the best practices in the community, I strictly practice KISS, DRY, YAGNI, and TDD which are vital to the stability of a software. Completed products are delivered with implementation of leading development frameworks, Ruby on Rails Angularjs, and Spree Commerce.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>800/94 Soi Trakoonsuk <br>Asoke-Dindaeng Rd.<br>Dindaeng, Bangkok 10400 <br> Thailand</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                              <a href="https://www.facebook.com/boompatorn" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                              <a href="http://www.reddit.com/user/patorn/liked" class="btn-social btn-outline"><i class="fa fa-fw fa-reddit"></i></a>
-                            </li>
-                            <li>
-                              <a href="skype:boompatorn?chat" class="btn-social btn-outline"><i class="fa fa-fw fa-skype"></i></a>
-                            </li>
-                            <li>
-                              <a href="https://www.linkedin.com/pub/patorn-utenpattanun" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                              <a href="https://github.com/patorn" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Email</h3>
-                        <p>patorn.u@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Patorn Utenpattanun 2015
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Matholia</h2>
-                            <hr class="star-primary">
-                            <a href="http://www.matholia.com.sg" target="_blank">
-                              <img src="img/portfolio/matholia.png" class="img-responsive img-centered" alt="">
-                            </a>
-                            <p>Matholia is the online Maths learning interactive site for primary school kids in Singapore. It features Maths practices with gamification, which creates the enjoyable experience for the users. I led the development team to create the most reliable application for users and collaborated with the client for both user experience and design. I have been worked on this project since February 2012 til present.</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://www.bre.com.sg">Blue Ring Education</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="#">Feb 2013</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong>
-                                      <a href="#">Web Development</a>,
-                                      <a href="#">Interaction Design</a>,
-                                      <a href="#">Web Design</a>
-                                    </strong>
-                                </li>
-                                <li>Technology
-                                  <strong>
-                                    <a href="#">Ruby on Rails</a>,
-                                    <a href="#">MySQL</a>
-                                  </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Food Runner</h2>
-                            <hr class="star-primary">
-                            <a href="https://www.roomservice.com.sg" target="_blank">
-                              <img src="img/portfolio/foodrunner.png" class="img-responsive img-centered" alt="">
-                            </a>
-                            <p>Food Runner is a holding company of food ordering and delivery business. It operates in four countries namely Malaysia, Singapore, Philippines and Indonesia under the local brands which are Room Service Deliveries and City Delivery. I had a chance to work with Food Runner’s technology and business development team and developed websites for both frontend and backend serving all those countries.</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://foodrunner.com.sg">Food Runner</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="#">Sep 2013</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="#">Web Development</a>
-                                    </strong>
-                                </li>
-                                <li>Technology
-                                  <strong>
-                                    <a href="#">Ruby on Rails</a>,
-                                    <a href="#">AngularJS</a>,
-                                    <a href="#">PostgreSQL</a>,
-                                    <a href="#">Redis</a>
-                                  </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Le Lapin Sandwiches</h2>
-                            <hr class="star-primary">
-                            <a href="http://www.lelapinbangkok.com" target="_blank">
-                              <img src="img/portfolio/lelapin.png" class="img-responsive img-centered" alt="">
-                            </a>
-                            <p>Le Lapin prepares and delivers its products in Bangkok. I worked with the development team to implement the Spree Commerce system for their operation. Lots of customizations were applied, such as, one page checkout, mobile navigation, and warehouse system.</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://www.lelapinbangkok.com">Le Lapin Sandwich Delivery Co., Ltd.</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="#">Sep 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="#">Web Development</a>
-                                    </strong>
-                                </li>
-                                <li>Technology
-                                  <strong>
-                                    <a href="#">Spree Commerce</a>
-                                  </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>GraphicsRF</h2>
-                            <hr class="star-primary">
-                            <a href="http://www.graphicsrf.com" target="_blank">
-                              <img src="img/portfolio/graphicsrf.png" class="img-responsive img-centered" alt="">
-                            </a>
-                            <p>Graphics RF is a royalty free illustration library and custom illustration/vectorization service. In order to purchase an image, a user need to have credits or an active subscription. The hardest part of this project is to minimize the amount of image data uploading to Amazon S3 server while syncing the image details to my application in order to save costs. Other interesting implementations include the subscription service and image download authorization.</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://www.bre.com.sg">Blue Ring Media</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="#">Oct 2012</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="#">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Food by Phone</h2>
-                            <hr class="star-primary">
-                            <a href="http://www.foodbyphone.com" target="_blank">
-                              <img src="img/portfolio/foodbyphone.png" class="img-responsive img-centered" alt="">
-                            </a>
-                            <p>
-                              Food by Phone is a high end restaurant delivery service in Bangkok. I was assigned to maintain the website both frontend and backend and also add new features to facilitate operation and marketing processes, for example, new reports, promotion codes, and redesign of the website.
-                            </p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://www.foodbyphone.com">Food by Phone</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="#">August 2012</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="#">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Whiteboard</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/whiteboard.png" class="img-responsive img-centered" alt="">
-                            <p>
-                                Whiteboard is the real-time whiteboard collaboration tool for teachers and students. Using WebSockets, we were able to establish a continuous full-duplex connection stream. Remote teaching can be implemented at ease.
-                            </p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://e-fle.com">e-FLE</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="#">Sep 2013</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="#">Web Development</a>
-                                    </strong>
-                                </li>
-                                <li>Technology
-                                  <strong>
-                                    <a href="#">Nodejs</a>,
-                                    <a href="#">Javascript</a>,
-                                    <a href="#">Socket.io</a>
-                                  </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Greenpeace</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/greenpeace.png" class="img-responsive img-centered" alt="">
-                            <p>
-                                I structured HTML & CSS codes to be used in their platform, <a href="http://www.engagingnetworks.net">Engaging Networks</a>.
-                            </p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="#">Greenpeace Southeast Asia</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="#">December 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="#">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -622,6 +435,6 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
 
-</body>
+  </body>
 
 </html>
