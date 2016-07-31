@@ -100,9 +100,15 @@
                 </tr>
                 <tr>
                   <td>Number of Topics</td>
-                  <td>227</td>
-                  <td>227</td>
-                  <td>137</td>
+                  <td>150</td>
+                  <td>150</td>
+                  <td>150</td>
+                </tr>
+                <tr>
+                  <td>Time Complexity</td>
+                  <td>O(n log n)</td>
+                  <td>O(n k m i)</td>
+                  <td>-</td>
                 </tr>
               </tbody>
               <thead>
@@ -113,59 +119,84 @@
               </tbody>
                 <tr>
                   <td>Nodes</td>
-                  <td>7814</td>
-                  <td>7925</td>
-                  <td>7925</td>
+                  <td>8212</td>
+                  <td>7452</td>
+                  <td>7762</td>
                 </tr>
                 <tr>
                   <td>Edges</td>
-                  <td>98164</td>
-                  <td>221933</td>
-                  <td>221933</td>
+                  <td>134587</td>
+                  <td>-</td>
+                  <td>191303</td>
                 </tr>
                 <tr>
                   <td>Diameter</td>
                   <td>15</td>
-                  <td>22</td>
-                  <td>22</td>
+                  <td>-</td>
+                  <td>19</td>
                 </tr>
                 <tr>
                   <td>Largest Connected Components</td>
                   <td>7356</td>
-                  <td>7549</td>
-                  <td>7549</td>
+                  <td>-</td>
+                  <td>7354</td>
                 </tr>
                 <tr>
                   <td>Avg Shortest Path</td>
                   <td>5.1</td>
-                  <td>5.95</td>
-                  <td>5.95</td>
+                  <td>-</td>
+                  <td>6.189</td>
                 </tr>
                 <tr>
                   <td>Avg Degree</td>
                   <td>25.12</td>
-                  <td>56</td>
-                  <td>56</td>
+                  <td>-</td>
+                  <td>49.292</td>
                 </tr>
               </tbody>
               <thead>
                 <tr>
-                  <td colspan=6><h5>Evaluation</h5></td>
+                  <td colspan=6><h5>Quantitative Evaluation</h5></td>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>Modularity</td>
-                  <td>0.8243</td>
-                  <td>0.6819</td>
-                  <td>0.7231</td>
+                  <td>0.777</td>
+                  <td>-</td>
+                  <td>0.826</td>
                 </tr>
                 <tr>
                   <td>Intra-Cluster Cosine Similarity: \({1 \over |S|^2} \displaystyle\sum_{d \in S} cos(d',d) \).</td>
-                  <td>0.5423</td>
-                  <td>0.3514</td>
-                  <td>0.4653</td>
+                  <td>0.516</td>
+                  <td>0.315</td>
+                  <td>0.485</td>
                 </tr>
+                <tr>
+                  <td>Intra-Cluster Cosine Similarity of Top 10</td>
+                  <td>0.615</td>
+                  <td>0.082</td>
+                  <td>0.076</td>
+                </tr>
+                <tr>
+                  <td>Intra-Cluster Cosine Similarity of Top 30</td>
+                  <td>0.593</td>
+                  <td>0.111</td>
+                  <td>0.131</td>
+                </tr>
+                <tr>
+                  <td>Intra-Cluster Cosine Similarity of Top 100</td>
+                  <td>0.517</td>
+                  <td>0.209</td>
+                  <td>0.390</td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <td colspan=6><h5>Qualitative Evaluation</h5></td>
+                </tr>
+              </thead>
+              <tbody>
               </tbody>
             </table>
           </div>
@@ -176,10 +207,10 @@
             <hr>
             <h4>Modularity</h4>
             <p>
-              <a href="msc_project/size_chart_net.png" target="_blank">
-                <img src="msc_project/size_chart_net.png" width="100%">
+              <a href="msc_project/size_chart_mod.png" target="_blank">
+                <img src="msc_project/size_chart_mod.png" width="100%">
               </a>
-              Documents not belong to any topic: 1272
+              Documents not belong to any topic: 874
             </p>
           </div>
           <div class="col-xs-12">
@@ -189,103 +220,170 @@
                 <img src="msc_project/size_chart_lda.png" width="100%">
               </a>
 
-              Documents not belong to any topic: 0
+              Documents not belong to any topic: 1634
             </p>
           </div>
           <div class="col-xs-12">
             <h4>LDA + Cosine + Modularity</h4>
             <p>
-              <a href="msc_project/size_chart_lda_cosine.png" target="_blank">
-                <img src="msc_project/size_chart_lda_cosine.png" width="100%">
+              <a href="msc_project/size_chart_lcm.png" target="_blank">
+                <img src="msc_project/size_chart_lcm.png" width="100%">
               </a>
 
-              Documents not belong to any topic: 1161
+              Documents not belong to any topic: 1324
             </p>
           </div>
         </div>
+
         <div class="row">
           <div class="col-xs-12">
-            <h3>Heatmap of Similarities between Modularity and LDA</h3>
-            <a href="msc_project/heatmap_lda.png" target="_blank">
-              <img src="msc_project/heatmap_lda.png" width="100%">
+            <h3>Probability Distribution of Topic Size</h3>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <h4>Modularity</h4>
+            <a href="msc_project/prob_dist_mod.png" target="_blank">
+              <img src="msc_project/prob_dist_mod.png" width="100%">
+            </a>
+          </div>
+          <div class="col-xs-6">
+            <h4>LDA</h4>
+            <a href="msc_project/prob_dist_lda.png" target="_blank">
+              <img src="msc_project/prob_dist_lda.png" width="100%">
+            </a>
+          </div>
+          <div class="col-xs-6">
+            <h4>LCM</h4>
+            <a href="msc_project/prob_dist_lcm.png" target="_blank">
+              <img src="msc_project/prob_dist_lcm.png" width="100%">
             </a>
           </div>
         </div>
+
         <div class="row">
           <div class="col-xs-12">
-            <h3>Heatmap of Similarities between Modularity and LCM</h3>
-            <a href="msc_project/heatmap_lda_cosine.png" target="_blank">
-              <img src="msc_project/heatmap_lda_cosine.png" width="100%">
+            <h3>Heatmap of Similarities</h3>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <h4>LDA and Modularity</h4>
+            <a href="msc_project/heatmap_lda_mod.png" target="_blank">
+              <img src="msc_project/heatmap_lda_mod.png" width="100%">
+            </a>
+          </div>
+          <div class="col-xs-6">
+            <h4>LDA and LCM</h4>
+            <a href="msc_project/heatmap_lda_lcm.png" target="_blank">
+              <img src="msc_project/heatmap_lda_lcm.png" width="100%">
+            </a>
+          </div>
+          <div class="col-xs-6">
+            <h4>Modularity and LCM</h4>
+            <a href="msc_project/heatmap_mod_lcm.png" target="_blank">
+              <img src="msc_project/heatmap_mod_lcm.png" width="100%">
             </a>
           </div>
         </div>
 
         <div class="row">
           <div class="col-xs-12">
-            <h3>Comparison of top 50 topics between Modularity and LDA: Sort by Topic Size</h3>
+            <h3>Comparison of top 30 topics between methods: Sort by Topic Size</h3>
             <table class="table">
               <thead>
                 <tr>
-                  <td>#</td>
-                  <td>Modularity Label</td>
+                  <td>LDA Size</td>
                   <td>Modularity Size</td>
-                  <td>Modularity Keywords</td>
+                  <td>LCM Size</td>
+                  <td>LDA Top Keywords</td>
+                  <td>Modularity Top Keywords</td>
+                  <td>LCM Top Keywords</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>898</td><td>1041</td><td>823</td><td>['vegan', 'friday', 'tuesday', 'monday', 'thursday', 'potti', 'sock', 'huel', 'tattoo', 'alix']</td><td>['dr', 'rat', 'antonia', 'embryo', 'soundcloud', 'binoch', 'debentur', 'ldc', 'doomerang', 'wolverin']</td><td>['vegan', 'potti', 'sock', 'huel', 'tattoo', 'alix', 'valentino', 'chat', 'antonia', 'throne']</td></tr>
+                <tr><td>654</td><td>696</td><td>817</td><td>['cannabi', 'invoic', 'fundrais', 'tyre', 'crm', 'therapist', 'embryo', 'parent', 'disabl', 'harari']</td><td>['churchil', 'mayweath', 'ttip', 'ceta', 'enrol', 'austinbehan', 'tfl', 'femin', 'rotherham', 'ehic']</td><td>['saudi', 'curfew', 'gchq', 'prison', 'lamprey', 'snowden', 'homeless', 'trubridg', '7eleven', 'cat']</td></tr>
+                <tr><td>477</td><td>647</td><td>702</td><td>['saudi', 'gchq', 'snowden', 'ranger', 'siem', 'sharia', 'csiro', 'fujimori', 'cornish', 'abc']</td><td>['g', 'season', 'mourinho', 'warnock', 'arteta', 'ranieri', 'rodger', 'pochettino', 'thai', 'morri']</td><td>['cannabi', 'vegan', 'apprenticeship', 'tyre', 'crm', 'fundrais', 'therapist', 'embryo', 'koosha', 'parent']</td></tr>
+                <tr><td>336</td><td>529</td><td>505</td><td>['mourinho', 'arteta', 'rodger', 'pochettino', 'bayern', 'mose', 'kompani', 'celtic', 'zidan', 'koeman']</td><td>['7eleven', 'palmer', 'siem', 'tobacco', 'abc', 'export', 'tax', 'indigen', 'cocoa', 'depp']</td><td>['dragon', 'rat', 'homer', 'trevelyan', 'binoch', 'plot', 'tudor', 'refn', 'wild', 'aggi']</td></tr>
+                <tr><td>304</td><td>421</td><td>459</td><td>['mezcal', 'djokov', 'ranieri', 'spur', 'suárez', 'pellegrini', 'nyquist', 'ortiz', 'widn', 'pepe']</td><td>['mdb', 'pollut', 'coral', 'seafood', 'reef', 'batteri', 'belgrad', 'csiro', 'acidif', 'plastic']</td><td>['kooiman', 'schipper', 'mourinho', 'warnock', 'mcilroy', 'arteta', 'gasol', 'rodger', 'bradford', 'pochettino']</td></tr>
+                <tr><td>304</td><td>370</td><td>407</td><td>['dragon', 'rat', 'homer', 'plot', 'estella', 'wild', 'frederik', 'aggi', 'sontag', 'koon']</td><td>['mnuchin', 'perez', 'valentino', 'thiel', 'obituari', 'gun', 'hyperloop', 'rubio', 'sarandon', 'pac']</td><td>['g', 'season', 'knox', 'ebner', 'djokov', 'ranieri', 'hayn', 'suárez', 'pellegrini', 'spieth']</td></tr>
+                <tr><td>296</td><td>352</td><td>399</td><td>['librari', 'hs2', 'ldc', 'tax', 'poverti', 'prison', 'tfl', 'neet', 'wage', 'burberri']</td><td>['password', 'tyre', 'crm', 'turmer', 'gchq', 'fawcettflatsfriday', 'ufc', 'data', 'adblock', 'quantum']</td><td>['invoic', 'librari', 'pension', 'tip', 'hs2', 'talktalk', 'nsi', 'journalist', 'ldc', 'doomerang']</td></tr>
+                <tr><td>286</td><td>341</td><td>337</td><td>['dogwhistl', 'council', 'enrol', 'ree', 'pcc', 'antisemit', 'plaid', 'scottish', 'labour', 'reuben']</td><td>['fundrais', 'therapist', 'oxygen', 'disabl', 'discharg', 'anxieti', 'fistula', 'diabet', 'suicid', 'reserv']</td><td>['mnuchin', 'thiel', 'bundi', 'obituari', 'gun', 'wap', 'rubio', 'sarandon', 'pac', 'hutterit']</td></tr>
+                <tr><td>226</td><td>302</td><td>333</td><td>['valentino', 'freita', 'lupidi', 'maketa', 'mansoor', 'kincora', 'ambul', 'tebow', 'redston', 'osbourn']</td><td>['pension', 'homeless', 'hs2', 'leasehold', 'barclay', 'cornish', 'durrel', 'mortgag', 'steel', 'council']</td><td>['galá', 'stubbl', 'temperley', 'barrow', 'brow', 'jacket', 'podcast', 'dick', 'jampol', 'mcdowel']</td></tr>
+                <tr><td>212</td><td>297</td><td>297</td><td>['palmer', 'art', 'guthri', 'seat', 'shorten', 'emiss', 'patholog', 'plebiscit', 'sufi', 'xenophon']</td><td>['parent', 'cv', 'talktalk', 'ucu', 'tran', 'nolan', 'hyman', 'engin', 'nu', 'unrwa']</td><td>['churchil', 'ttip', 'enrol', 'rm', 'ehic', 'patten', 'poll', 'eu', 'greec', 'irish']</td></tr>
+                <tr><td>153</td><td>295</td><td>291</td><td>['dada', 'nevi', 'thorp', 'māori', 'floppi', 'prometheu', 'nestlé', 'whicker', 'crossword', 'palestinian']</td><td>['librari', 'alix', 'dragon', 'bee', 'tip', 'cat', 'freita', 'itch', 'plot', 'ivi']</td><td>['muslim', 'ree', 'pcc', 'antisemit', 'plaid', 'yıldırım', 'council', 'mcgarri', 'scottish', 'gani']</td></tr>
+                <tr><td>147</td><td>286</td><td>245</td><td>['galá', 'temperley', 'mustonen', 'andsn', 'florenc', 'wap', 'nao’', 'shauf', 'dvořák’', 'improvis']</td><td>['saudi', 'journalist', 'refuge', 'humanitarian', 'sharia', 'muslim', 'jacket', 'dominican', 'kroto', 'airdrop']</td><td>['palmer', 'art', 'tax', 'guthri', 'seat', 'shorten', 'patholog', 'wyatt', 'bishop', 'plebiscit']</td></tr>
+                <tr><td>136</td><td>258</td><td>236</td><td>['mnuchin', 'thiel', 'rubio', 'pac', 'adelson', 'romney', 'cruz', 'obituari', 'sander', 'priebu']</td><td>['tattoo', 'ridsdal', 'masturb', 'bundi', 'dog', 'porn', 'sulli', 'verizon', 'arpaio', 'kincora']</td><td>['dada', 'lido', 'itch', 'ivi', 'estella', 'diski', 'thorp', 'garvi', 'hel', 'audrey']</td></tr>
+                <tr><td>130</td><td>257</td><td>174</td><td>['bundi', 'wap', 'sarandon', 'dane', 'starl', 'kelli', 'rubio', 'weinstein', 'blair', 'biden']</td><td>['hertz', 'bbc', 'bauer', 'recip', 'scilli', 'soap', 'grundi', 'birmingham', 'harass', 'peston']</td><td>['mdb', 'refuge', 'humanitarian', 'airdrop', 'ricu', 'drug', 'educ', 'orphanag', 'displac', 'aid']</td></tr>
+                <tr><td>126</td><td>247</td><td>162</td><td>['coral', 'seafood', 'reef', 'batteri', 'food', 'solar', 'energi', 'lithium', 'renew', '400ppm']</td><td>['tuesday', 'friday', 'wednesday', 'monday', 'thursday', 'yay', 'apprenticeship', 'harari', 'contactless', 'food']</td><td>['fundrais', 'disabl', 'discharg', 'fistula', 'data', 'probiot', 'diabet', 'suicid', 'verizon', 'hiv']</td></tr>
+                <tr><td>120</td><td>212</td><td>135</td><td>['tobacco', 'humanitarian', 'airdrop', 'tax', 'fgm', 'educ', 'orphanag', 'displac', 'aid', 'women’']</td><td>['cannabi', 'prison', 'pelé', 'antibiot', 'snowden', 'wap', 'ávila', 'corbi', 'tebow', 'rm']</td><td>['coral', 'seafood', 'reef', 'batteri', 'plastic', 'food', 'solar', 'energi', 'lithium', 'renew']</td></tr>
+                <tr><td>118</td><td>170</td><td>110</td><td>['churchil', 'eurovis', 'ehic', 'ttip', 'eu', 'irish', 'ireland', 'truss', 'hargreav', 'gillingham']</td><td>['schipper', 'diamond', 'tenni', 'knox', 'mcilroy', 'djokov', 'gasol', 'spieth', 'clara', 'pendleton']</td><td>['bbc', 'cornish', 'birmingham', 'patten', 'attenborough', 'channel', 'speech', 'linsey', 'remit', 'respublica']</td></tr>
+                <tr><td>113</td><td>140</td><td>102</td><td>['homeless', 'discharg', 'fistula', 'data', 'diabet', 'suicid', 'health', 'agedcar', 'elearn', 'abort']</td><td>['garden', 'throne', 'ranger', 'barrow', 'eleph', 'ivori', 'squirrel', 'salmon', 'plant', 'rhino']</td><td>['biss', 'hatoum', 'lassnig', 'bonsai', 'missoni', 'circl', 'koon', 'hepworth', 'spider', 'houghton']</td></tr>
+                <tr><td>96</td><td>129</td><td>94</td><td>['bbc', 'birmingham', 'patten', 'channel', 'linsey', 'respublica', 'bame', 'whittingdal', 'puttnam', 'recip']</td><td>['itoj', 'ebner', 'hayn', 'corbisiero', 'widn', 'mcshane', 'carter', 'goromaru', 'ayestarán', 'j']</td><td>['ranger', 'barclay', 'steel', 'thermomix', 'wolseley', 'bh', 'sabl', 'tata', 'zwillenberg', 'putopt']</td></tr>
+                <tr><td>95</td><td>118</td><td>84</td><td>['itch', 'garvi', 'alfi', 'plum’', 'ricki', 'd’evil', 'erdrich', 'laros', 'audrey', 'hazel']</td><td>['mathew', 'gayl', 'compton', 'gillespi', 'stoke', 'panesar', 'cemeteri', 'shanaka', 'bairstow', 'grave']</td><td>['mathew', 'gayl', 'compton', 'shanaka', 'panesar', 'wicket', 'cook', 'sangakkara', 'woak', 'finn']</td></tr>
+                <tr><td>85</td><td>108</td><td>75</td><td>['prison', 'uae', 'ratner', 'etherton', 'mohammadi', 'patel', 'guzmán', 'injunct', 'ismayilova', 'habré']</td><td>['hatoum', 'lassnig', 'art', 'koon', 'museum', 'hodgkin', 'colau', 'tate', 'eln', 'hockney']</td><td>['falafel', 'turmer', 'miso', 'recip', 'egg', 'pectin', 'macaroni', 'cake', 'thai', 'vegan']</td></tr>
+                <tr><td>84</td><td>100</td><td>73</td><td>['pcc', 'polic', 'o’dea', 'mosbi', 'flight', 'oakland', 'emanuel', 'orgreav', 'adej', 'chemic']</td><td>['embarrass', 'ling', 'mic', 'floral', 'kim', 'mao', 'okinawa', 'wingfieldhay', 'instagram', 'nuclear']</td><td>['belgrad', 'sym', 'iona', 'curitiba', 'tamkeen', 'gk', 'chennai', 'lgbti', 'nickel', 'norwood']</td></tr>
+                <tr><td>83</td><td>99</td><td>73</td><td>['huppert', 'tubman', 'ninagawa', 'halloween', 'hathaway', '1986', 'vikand', 'lumièr', 'winfrey', 'sherlock']</td><td>['fallon', 'nyquist', 'allweath', 'gosden', 'payn', 'derbi', 'frankel', 'ride', 'o’brien', 'mi']</td><td>['friday', 'noseband', 'morri', 'fallon', 'nyquist', 'allweath', 'gosden', 'fc', 'derbi', 'frankel']</td></tr>
+                <tr><td>81</td><td>93</td><td>53</td><td>['barclay', 'mitsubishi', 'bh', 'sabl', 'tata', '•', 'zwillenberg', 'putopt', 'pension', 'tsinghua']</td><td>['curri', 'tampon', 'raptor', 'warcraft', 'spur', 'laker', 'chibok', 'battlefield', 'girl', 'doom']</td><td>['award', 'morag', 'noorjji', 'moya', 'angharad', 'koalapak', 'roasteri', 'dreamr', 'salli', 'tash']</td></tr>
+                <tr><td>81</td><td>85</td><td>34</td><td>['hatoum', 'lassnig', 'missoni', 'circl', 'hepworth', 'spider', 'houghton', 'vesuviu', 'caterpillar', 'dubuffet']</td><td>['dada', 'hutterit', 'iceland', 'poetri', 'wine', 'greec', 'fpö', 'poem', 'plath’', 'hofer']</td><td>['ucu', 'tax', 'corrupt', 'commonwealth', 'buhari', 'sapin', 'anticorrupt', 'offshor', 'haven', 'summit']</td></tr>
+                <tr><td>77</td><td>80</td><td>33</td><td>['lamprey', 'cat', 'whale', 'carib', 'wolverin', 'acidif', 'leopard', 'wolv', 'bison', 'frack']</td><td>['vegan', 'sock', 'miso', 'egg', 'chees', 'pastri', 'potato', 'macaroni', 'cake', 'pizza']</td><td>['fpö', 'hofer', 'bellen', 'facebook', 'moussaieff', 'grímsson', 'news', 'grillo', 'der', 'wel']</td></tr>
+                <tr><td>75</td><td>75</td><td>31</td><td>['belgrad', 'corbi', 'parish', 'sym', 'iceland', 'gk', 'council', 'chennai', 'devolut', 'redston']</td><td>['tsa', 'spider', 'hut', 'hedg', 'mh370', 'flight', 'turtl', 'chocolat', 'menzio', 'berri']</td><td>['abort', 'oklahoma', 'bathroom', 'nayfack', 'adopt', 'transgend', 'rcm', 'louisiana', 'samesex', 'havard’']</td></tr>
+                <tr><td>71</td><td>62</td><td>28</td><td>['g', 'season', 'cincinnati', 'poyet', 'martínez', 'tuohi', 'benítez', 'harper', 'vieira', 'strasburg']</td><td>['furi', 'alicia', 'cum', 'rosberg', 'hay', 'hamilton', 'tyson', 'race', 'bdo', 'eccleston']</td><td>['password', 'spotifi', 'tidal', 'youtub', 'cash', 'radiohead', 'cent', 'soni', '3x3', 'adel']</td></tr>
+                <tr><td>70</td><td>43</td><td>27</td><td>['mathew', 'compton', 'shanaka', 'panesar', 'wicket', 'cook', 'sangakkara', 'woak', 'finn', 'test']</td><td>['eurovis', 'weinstein', 'deen', 'vr', 'savchenko', 'viewer', 'saakashvili', 'odessa', 'ukrain', 'bfg']</td><td>['monday', 'raptor', 'spur', 'curri', 'nhl', 'island', 'cavali', 'it’', 'oneanddon', 'allnba']</td></tr>
+                <tr><td>69</td><td>21</td><td>27</td><td>['noseband', 'welbeck', 'allweath', 'gosden', 'payn', 'fc', 'derbi', 'frankel', 'o’brien', 'race']</td><td>['rawabi', 'netanyahu', 'palestinian', 'lieberman', 'hinn', 'hama', 'gaza', 'isra', 'ngo', 'abu']</td><td>['thursday', 'guam', 'rescreen', 'egyptian', 'it’', 'passeng', 'eagl', 'plane', 'flight', 'egyptair']</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Matching top 30 LDA labels to Modularity labels.</h3>
+            <table class="table">
+              <thead>
+                <tr>
                   <td>LDA Label</td>
                   <td>LDA Size</td>
-                  <td>LDA Keywords</td>
+                  <td>Modularity Label</td>
+                  <td>Modularity Size</td>
+                  <td>Similar Keywords</td>
+                  <td>Cosine Similarity of Documents</td>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td>6</td><td>612</td><td>['g', 'season', 'mourinho', 'warnock', 'arteta', 'ranieri', 'rodger', 'pochettino', 'thai', 'morri']</td><td>190</td><td>1147</td><td>['potti', 'dada', 'tattoo', 'dragon', 'rat', 'valentino', 'goat', 'antonia', 'throne', 'koosha']</td><td></tr>
-                <tr><td>2</td><td>170</td><td>494</td><td>['fundrais', 'dr', 'fundrais', 'therapist', 'oxygen', 'discharg', 'anxieti', 'anxieti', 'diabet', 'suicid']</td><td>89</td><td>869</td><td>['sock', 'bbc', 'parent', 'homer', 'harari', 'contrail', 'doomerang', 'tran', 'ttip', 'kenzo']</td><td></tr>
-                <tr><td>3</td><td>89</td><td>487</td><td>['antonia', 'cv', 'disabl', 'talktalk', '7eleven', 'ucu', 'binoch', 'ldc', 'disabl', 'abort']</td><td>77</td><td>471</td><td>['curfew', 'bundi', 'uae', 'ghomeshi', 'wolverin', 'ratner', 'fujimori', 'freita', 'bahá’í', 'lupidi']</td><td></tr>
-                <tr><td>4</td><td>86</td><td>449</td><td>['hs2', 'siem', 'tobacco', 'tobacco', 'tax', 'hs2', 'cocoa', 'depp', 'wage', 'tax']</td><td>173</td><td>355</td><td>['perez', 'snowden', 'palmer', 'siem', 'cornish', 'eleph', 'mcilroy', 'church', 'eavi', 'librari']</td><td></tr>
-                <tr><td>5</td><td>218</td><td>442</td><td>['churchil', 'ttip', 'ttip', 'sharia', 'export', 'ceta', 'enrol', 'rm', 'ehic', 'patten']</td><td>114</td><td>339</td><td>['fundrais', 'apprenticeship', 'tyre', 'prison', 'fundrais', 'disabl', 'homeless', 'disabl', 'humanitarian', 'dementia']</td><td></tr>
-                <tr><td>6</td><td>11</td><td>396</td><td>['homeless', 'mayweath', 'leasehold', 'muslim', 'council', 'homeless', 'parish', 'tfl', 'ricu', 'mosqu']</td><td>215</td><td>325</td><td>['vegan', 'wednesday', 'wednesday', 'tuesday', 'monday', 'thursday', 'huel', 'alix', 'chat', 'tip']</td><td></tr>
-                <tr><td>7</td><td>207</td><td>376</td><td>['soundcloud', 'wed', 'pite', 'lassnig', 'art', 'dane', 'festiv', 'eavi', 'franzen', 'ipod']</td><td>59</td><td>315</td><td>['kooiman', 'schipper', 'pite', 'knox', 'itoj', 'curri', 'warnock', 'raptor', 'ebner', 'arteta']</td><td></tr>
-                <tr><td>8</td><td>96</td><td>318</td><td>['mdb', 'pollut', 'coral', 'seafood', 'reef', 'batteri', 'belgrad', 'csiro', 'acidif', 'plastic']</td><td>11</td><td>313</td><td>['g', 'season', 'ranieri', 'pellegrini', 'bt', 'koeman', 'snodgrass', 'sturridg', 'preseason', 'xia']</td><td></tr>
-                <tr><td>9</td><td>81</td><td>313</td><td>['tuesday', 'friday', 'friday', 'friday', 'wednesday', 'wednesday', 'wednesday', 'wednesday', 'tuesday', 'tuesday']</td><td>216</td><td>277</td><td>['invoic', 'bauer', 'ufc', 'soundcloud', 'ranger', 'barclay', 'duracel', 'verizon', 'cocoa', 'gannett']</td><td></tr>
-                <tr><td>10</td><td>97</td><td>298</td><td>['mnuchin', 'perez', 'thiel', 'obituari', 'gun', 'gun', 'rubio', 'sarandon', 'pac', 'meme']</td><td>24</td><td>249</td><td>['mdb', 'saudi', 'talktalk', 'discharg', '7eleven', 'sharia', 'csiro', 'saudi', 'glyphos', 'salmon']</td><td></tr>
-                <tr><td>11</td><td>216</td><td>275</td><td>['librari', 'dragon', 'bee', 'tip', 'fawcettflatsfriday', 'cat', 'bangladesh', 'itch', 'heel', 'plot']</td><td>99</td><td>192</td><td>['mnuchin', 'rubio', 'sarandon', 'pac', 'meme', 'rubio', 'rubio', 'adelson', 'biden', 'coloradocar']</td><td></tr>
-                <tr><td>12</td><td>49</td><td>257</td><td>['saudi', 'journalist', 'refuge', 'humanitarian', 'refuge', 'jacket', 'refuge', 'saudi', 'humanitarian', 'airdrop']</td><td>118</td><td>188</td><td>['churchil', 'rotherham', 'ehic', 'ttip', 'eu', 'irish', 'tax', 'eu', 'imf', 'eu']</td><td></tr>
-                <tr><td>13</td><td>172</td><td>253</td><td>['tattoo', 'ridsdal', 'valentino', 'masturb', 'bundi', 'dog', 'porn', 'sulli', 'kincora', 'lyst']</td><td>192</td><td>185</td><td>['barrow', 'sunscreen', 'thorp', 'ratner', 'mcdowel', 'hodgkin', 'fisk', 'grotto', 'prometheu', 'binchi']</td><td></tr>
-                <tr><td>14</td><td>178</td><td>245</td><td>['password', 'snowden', 'abc', 'curri', 'raptor', 'warcraft', 'embarrass', 'guthri', 'spur', 'ling']</td><td>202</td><td>172</td><td>['crm', 'emoji', 'cv', 'data', 'adblock', 'quantum', 'plastic', 'tampon', 'export', 'morag']</td><td></tr>
-                <tr><td>15</td><td>191</td><td>200</td><td>['cannabi', 'prison', 'prison', 'pelé', 'antibiot', 'prison', 'prison', 'prison', 'prison', 'ratner']</td><td>181</td><td>161</td><td>['aquajog', 'tyre', 'nevi', 'sleepwalk', 'lung', 'andsn', 'fashion', 'widn', 'gayl', 'pepe']</td><td></tr>
-                <tr><td>16</td><td>83</td><td>178</td><td>['parent', 'tran', 'nolan', 'hyman', 'unrwa', 'teacher', 'duckworth', 'guardianteach', 'breakfast', 'school']</td><td>170</td><td>153</td><td>['thiel', 'warcraft', 'toy', 'tubman', 'kwouk', 'halloween', 'hathaway', 'vikand', 'kwouk', 'comic']</td><td></tr>
-                <tr><td>17</td><td>36</td><td>160</td><td>['bbc', 'bbc', 'bbc', 'bbc', 'recip', 'bbc', 'bbc', 'bbc', 'grundi', 'birmingham']</td><td>52</td><td>138</td><td>['pcc', 'plaid', 'plaid', 'scottish', 'labour', 'ree', 'labour', 'mp', 'labour', 'zane']</td><td></tr>
-                <tr><td>18</td><td>164</td><td>141</td><td>['pension', 'steel', 'pension', 'glyphos', 'bh', 'tata', 'bh', 'tata', 'asda', 'bh']</td><td>160</td><td>135</td><td>['hs2', 'hyperloop', 'hyperloop', 'yerevan', 'flint', 'corbi', 'rawabi', 'cheonggyecheon', 'frack', 'cancer']</td><td></tr>
-                <tr><td>19</td><td>186</td><td>135</td><td>['drone', 'mansoor', 'iceland', 'interpret', 'uber', 'hekmatyar', 'ev', 'rosberg', 'drone', 'uber']</td><td>29</td><td>119</td><td>['temperley', 'etherton', 'ned', 'crossword', 'penn', 'laker', 'peston', 'celtic', 'atp', 'chayka']</td><td></tr>
-                <tr><td>20</td><td>152</td><td>134</td><td>['itoj', 'ebner', 'hayn', 'hayn', 'corbisiero', '•', 'widn', 'haggerti', 'mcshane', '•']</td><td>55</td><td>118</td><td>['hertz', 'bbc', 'hertz', 'bbc', 'bbc', 'bbc', 'bbc', 'birmingham', 'patten', 'bbc']</td><td></tr>
-                <tr><td>21</td><td>215</td><td>132</td><td>['hertz', 'bauer', 'hertz', 'eurovis', 'tudor', 'scilli', 'cunk', 'weinstein', 'deen', 'peston']</td><td>22</td><td>109</td><td>['shorten', 'bishop', 'plebiscit', 'sufi', 'xenophon', 'turnbul', 'turnbul', 'labor', 'shorten', 'bandt']</td><td></tr>
-                <tr><td>22</td><td>194</td><td>114</td><td>['schipper', 'diamond', 'hyperloop', 'knox', 'hyperloop', 'mcilroy', 'gasol', 'spieth', 'clara', 'pendleton']</td><td>107</td><td>106</td><td>['librari', 'bee', 'journalist', 'ldc', 'prison', 'neet', 'wage', 'legrain', 'inflat', 'popul']</td><td></tr>
-                <tr><td>23</td><td>125</td><td>110</td><td>['mathew', 'gayl', 'gayl', 'compton', 'stoke', 'panesar', 'cemeteri', 'shanaka', 'cemeteri', 'bairstow']</td><td>164</td><td>98</td><td>['gchq', 'baidu', 'abc', 'lyst', 'app', 'mm', 'instagram', 'mulkentin', 'møller', 'browser']</td><td></tr>
-                <tr><td>24</td><td>76</td><td>104</td><td>['vegan', 'vegan', 'vegan', 'turmer', 'embryo', 'miso', 'egg', 'skin', 'chees', 'pastri']</td><td>21</td><td>97</td><td>['rhino', 'agedcar', 'reef', 'nh', 'singlepay', 'emiss', 'patholog', 'ato', 'subsidi', 'tax']</td><td></tr>
-                <tr><td>25</td><td>92</td><td>102</td><td>['barrow', 'langley', 'award', 'morag', 'noorjji', 'moya', 'salmon', 'angharad', 'koalapak', 'roasteri']</td><td>123</td><td>86</td><td>['leasehold', 'homeless', 'shoe', 'cashback', 'talktalk', 'tfl', 'librari', 'rent', 'goldcar', 'council']</td><td></tr>
-                <tr><td>26</td><td>150</td><td>98</td><td>['fallon', 'nyquist', 'allweath', 'gosden', 'payn', 'derbi', 'derbi', 'frankel', 'payn', 'ride']</td><td>128</td><td>78</td><td>['mathew', 'compton', 'shanaka', 'bairstow', 'panesar', 'wicket', 'wicket', 'cook', 'sangakkara', 'grave']</td><td></tr>
-                <tr><td>27</td><td>160</td><td>96</td><td>['garden', 'garden', 'garden', 'ranger', 'eleph', 'ivori', 'indigen', 'squirrel', 'plant', 'rhino']</td><td>109</td><td>75</td><td>['galá', 'trubridg', 'nao’', 'rage', 'faustu', 'sevdah', 'track', 'metheni', 'neset', 'song']</td><td></tr>
-                <tr><td>28</td><td>115</td><td>65</td><td>['tsa', 'spider', 'hedg', 'mh370', 'flight', 'turtl', 'turtl', 'spider', 'chocolat', 'menzio']</td><td>178</td><td>72</td><td>['antibiot', 'oxygen', 'mayweath', 'fistula', 'baka', 'mbsr', 'diabet', 'vertigo', 'transplant', 'potato']</td><td></tr>
-                <tr><td>29</td><td>117</td><td>55</td><td>['apprenticeship', 'church', 'grotto', 'bt', 'archdioces', 'hitchen', 'bt', 'faith', 'priest', 'bond']</td><td>185</td><td>70</td><td>['noseband', 'frederik', 'fallon', 'nyquist', 'comet', 'allweath', 'gosden', 'payn', 'derbi', 'derbi']</td><td></tr>
-                <tr><td>30</td><td>118</td><td>53</td><td>['tenni', 'djokov', 'beden', 'mauresmo', 'mladenov', 'murray', 'murray', 'murray', 'djokov', 'murray']</td><td>75</td><td>68</td><td>['falafel', 'miso', 'recip', 'egg', 'pectin', 'pastri', 'macaroni', 'cake', 'thai', 'vegan']</td><td></tr>
-                <tr><td>31</td><td>168</td><td>50</td><td>['wolverin', 'xmen', 'comic', 'helberg', 'florenc', 'preacher', 'superhero', 'dc', 'batman', 'pullman']</td><td>50</td><td>65</td><td>['dogwhistl', 'enrol', 'poll', 'muslim', 'khan', 'muslim', 'vote', 'zylinski', 'ree', 'goldsmith']</td><td></tr>
-                <tr><td>32</td><td>211</td><td>43</td><td>['dada', 'poetri', 'poetri', 'greec', 'poem', 'plath’', 'debt', 'debt', 'biennal', 'duffi']</td><td>182</td><td>64</td><td>['patten', 'fgm', 'trudeau', 'trudeau', 'chilcot', 'ttip', 'eagl', 'outer', 'kendal', 'renegoti']</td><td></tr>
-                <tr><td>33</td><td>161</td><td>28</td><td>['debentur', 'ticket', 'ticket', 'crossword', 'resel', 'crossword', 'fashion', 'cryptic', 'crossword', 'ticket']</td><td>205</td><td>56</td><td>['tobacco', 'acidif', 'tobacco', 'frisbi', '400ppm', 'exxon', 'adblock', 'standardis', 'tobacco', 'co2']</td><td></tr>
-                <tr><td>34</td><td>112</td><td>21</td><td>['hutterit', 'fpö', 'hofer', 'bellen', 'hofer', 'hofer', 'bellen', 'der', 'fpö', 'der']</td><td>23</td><td>55</td><td>['tuesday', 'cincinnati', 'bayern', 'leagu', 'sullivan', 'leicest', 'leagu', 'yarmolenko', 'leagu', 'stadium']</td><td></tr>
-                <tr><td>35</td><td>29</td><td>20</td><td>['rawabi', 'netanyahu', 'palestinian', 'palestinian', 'lieberman', 'hinn', 'hama', 'palestinian', 'gaza', 'isra']</td><td>62</td><td>48</td><td>['award', 'koalapak', 'roasteri', 'piano', 'prize', 'runner', 'gnm', 'tash', 'longleat', 'prize']</td><td></tr>
-                <tr><td>36</td><td>51</td><td>20</td><td>['aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'dann', 'cabay', 'aug']</td><td>134</td><td>45</td><td>['embryo', 'abort', 'abort', 'interpret', 'abort', 'abort', 'patel', 'abort', 'abort', 'ilga']</td><td></tr>
-                <tr><td>37</td><td>114</td><td>16</td><td>['bitcoin', 'bitcoin', 'bitcoin', 'bitcoin', 'kabila', 'wright', 'spacey', 'wright', 'bitcoin', 'wright']</td><td>76</td><td>42</td><td>['garvi', 'alfi', 'dard', 'loney', 'hazel', 'ackermann', 'trina', 'pellinor', 'fiction', 'sacha']</td><td></tr>
-                <tr><td>38</td><td>144</td><td>12</td><td>['throne', 'jon', '“r', 'tyrel', 'j”', 'sansa', 'dani', 'jaim', 'hodor', 'lyanna']</td><td>150</td><td>42</td><td>['coral', 'reef', 'batteri', 'reef', 'solar', 'energi', 'lithium', 'renew', 'reef', 'messel']</td><td></tr>
-                <tr><td>39</td><td>80</td><td>11</td><td>['chibok', 'chibok', 'haram', 'giwa', 'boko', 'nkeki', 'boko', 'haram', 'chibok', 'boko']</td><td>161</td><td>42</td><td>['turmer', 'probiot', 'food', 'ipod', 'toilet', 'coffe', 'food', 'crossword', 'plastic', 'vegan']</td><td></tr>
-                <tr><td>40</td><td>44</td><td>8</td><td>['ufc', 'mayweath', 'mcgregor', 'ufc', 'editor', 'mcgregor', 'mullin', 'ufc', 'ufc', 'editor']</td><td>186</td><td>41</td><td>['mesonero', 'gold', 'museum', 'neanderth', 'cave', 'museum', 'johan', 'kahn’', 'comput', 'moggridg']</td><td></tr>
-                <tr><td>41</td><td>57</td><td>8</td><td>['3x3', '3x3', '3x3', '3x3', '83', '83', '83', '83', 'grid', 'grid']</td><td>66</td><td>37</td><td>['wednesday', 'wednesday', 'tenni', 'djokov', 'beden', 'murray', 'murray', 'djokov', 'roger', 'player']</td><td></tr>
-                <tr><td>42</td><td>141</td><td>8</td><td>['climb', 'climber', 'climber', 'coxsey', 'climber', 'everest', 'everest', 'everest', 'sherpa', 'climb']</td><td>125</td><td>37</td><td>['pension', 'dolphin', 'bh', 'bh', 'bh', 'bh', 'bh', 'bight', 'bh', 'pension']</td><td></tr>
-                <tr><td>43</td><td>33</td><td>7</td><td>['alicia', 'cum', 'celia', 'alicia', 'travi', 'madison', 'nick', 'alicia', 'zombi', 'travi']</td><td>139</td><td>37</td><td>['drone', 'mh370', 'guam', 'moroccan', 'rescreen', 'egyptian', 'passeng', 'helicopt', 'naukrati', 'crew']</td><td></tr>
-                <tr><td>44</td><td>142</td><td>7</td><td>['bha', 'bha', 'bha', 'bha', 'lohn', 'bha', 'lohn', 'bha', 'bha', 'disciplinari']</td><td>211</td><td>34</td><td>['orgreav', 'db', 'junior', 'junior', 'orgreav', 'junior', 'junior', 'junior', 'fa', 'junior']</td><td></tr>
-                <tr><td>45</td><td>155</td><td>7</td><td>['harari', 'robot', 'robot', 'zora', 'robot', 'capit', 'deblieck', 'em', 'ubi', 'robot']</td><td>212</td><td>33</td><td>['lamprey', 'whale', 'leopard', 'whale', 'crocodil', 'mic', 'chimpanze', 'speci', 'liberia', 'tachai']</td><td></tr>
-                <tr><td>46</td><td>137</td><td>6</td><td>['gustav', 'mattia', 'gustav', 'tremain', 'mattia', 'gustav', 'magnu', 'sofia', 'anton', 'verita']</td><td>116</td><td>32</td><td>['mustonen', 'improvis', 'berg', 'tiersen', 'levit', 'bohren', 'bach', 'berg’', 'festiv', 'piau']</td><td></tr>
-                <tr><td>47</td><td>176</td><td>6</td><td>['dress', 'yellow', 'yellow', 'dress', 'azaelea', 'carpet', 'ball', 'umpir', 'ref', 'lawri']</td><td>201</td><td>32</td><td>['borer', 'tree', 'ash', 'ash', 'ash', 'forest', 'bycatch', 'białowieża', 'tuna', 'tree']</td><td></tr>
-                <tr><td>48</td><td>55</td><td>5</td><td>['anag', 'anag', 'anag', 'anag', 'def', 'def', 'anag', 'd', 'rev', 'meddlesom']</td><td>102</td><td>31</td><td>['hyman', 'unrwa', 'nurofen', 'school', 'school', 'aurukun', 'nash', 'school', 'riddel', 'saudi']</td><td></tr>
-                <tr><td>49</td><td>68</td><td>5</td><td>['princ', 'windsor', 'harri', 'hors', 'delud', 'kate', 'tesco', 'pippa', 'enfield', 'fool”']</td><td>39</td><td>29</td><td>['pollut', 'eastbourn', 'pollut', 'pollut', 'diesel', 'pollut', 'pollut', 'pollut', 'pollut', 'pollut']</td><td></tr>
-                <tr><td>50</td><td>223</td><td>5</td><td>['ilga', 'lgbti', 'azerbaijan', 'lgbti', 'convict', 'intersex', 'lgbti', 'convict', 'expung', 'homosexu']</td><td>177</td><td>29</td><td>['cassowari', 'snitti', 'bear', 'iceland', 'vang', 'vieng', 'mcmurray', 'mcmurray', 'volcano', 'fort']</td><td></tr>
+                <tr><td>1</td><td>898</td><td>1</td><td>1041</td><td>{'cunk', 'antonia', 'wed', 'eavi', 'hellboy', 'ipod'}</td><td>0.28752874108</td></tr>
+                <tr><td>2</td><td>654</td><td>10</td><td>297</td><td>{'teacher', 'tran', 'exam', 'parent'}</td><td>0.199671266817</td></tr>
+                <tr><td>3</td><td>477</td><td>4</td><td>529</td><td>{'tobacco', 'siem', 'papua', 'icac', 'guantánamo', 'island', 'png', 'peri', 'qn', 'abc'}</td><td>0.131388365516</td></tr>
+                <tr><td>4</td><td>336</td><td>3</td><td>647</td><td>{'kane', 'terim', 'monchi', 'martial', 'boro', 'dembélé', 'arteta', 'mourinho', 'mose', 'coppel', 'preseason', 'kompani', 'klopp', 'welbeck', 'pochettino', 'zidan', 'bayern', 'pellegrini', 'koeman', 'rodger', 'celtic', 'leagu', 'ajax'}</td><td>0.589808347519</td></tr>
+                <tr><td>5</td><td>304</td><td>3</td><td>647</td><td>{'ranieri', 'sturridg', 'pellegrini', 'pepe', 'kompani', 'kamara', 'xhaka', 'linek', 'wynalda', 'pellegrini’', 'touré', 'hourihan', 'suárez'}</td><td>0.432924632108</td></tr>
+                <tr><td>6</td><td>304</td><td>1</td><td>1041</td><td>{'rat'}</td><td>0.15109732271</td></tr>
+                <tr><td>7</td><td>296</td><td>9</td><td>302</td><td>{'pension', 'britvic', 'sainsburi', 'rail', 'wolfson', 'asda', 'retail', 'hs2', 'uc', 'sainsbury’'}</td><td>0.280950596856</td></tr>
+                <tr><td>8</td><td>286</td><td>2</td><td>696</td><td>{'london', 'livingston', 'enrol', 'reuben', 'vote', 'plaid', 'zylinski', 'antisemit', 'hilton', 'ree', 'khan', 'referendum', 'scottish', 'mp', 'labour', 'muslim', 'snp'}</td><td>0.582754601706</td></tr>
+                <tr><td>9</td><td>226</td><td>13</td><td>258</td><td>{'bowravil', 'hutch’', 'dog', 'grood', 'cuic', 'kincora'}</td><td>0.128380073881</td></tr>
+                <tr><td>10</td><td>212</td><td>4</td><td>529</td><td>{'tobacco', 'seat', 'guthri', 'sufi', 'patholog', 'xenophon', 'palmer', 'peri', 'indigen', 'ato', 'tax', 'shorten', 'plebiscit'}</td><td>0.600205942471</td></tr>
+                <tr><td>11</td><td>153</td><td>89</td><td>2</td><td>{'glow'}</td><td>0.114332390095</td></tr>
+                <tr><td>12</td><td>147</td><td>1</td><td>1041</td><td>{'festiv'}</td><td>0.176386384617</td></tr>
+                <tr><td>13</td><td>136</td><td>6</td><td>370</td><td>{'casino', 'clinton', 'women', 'kelli', 'rubio', 'priebu', 'wiley', 'pac', 'warren', 'obituari', 'trump', 'sander', 'latino', 'adelson', 'romney', 'cruz', 'deleg', 'thiel', 'mnuchin'}</td><td>0.597357721983</td></tr>
+                <tr><td>14</td><td>130</td><td>6</td><td>370</td><td>{'mcafe', 'starr', 'clinton', 'biden', 'blumenth', 'sarandon', 'kendal', 'gun', 'sander', 'kelli', 'rubio'}</td><td>0.164145870932</td></tr>
+                <tr><td>15</td><td>126</td><td>5</td><td>421</td><td>{'ga', 'seafood', 'renew', 'reef', 'coral', 'divest', 'batteri', '400ppm', 'energi', 'solar', 'exxon', 'lithium', 'subsidi'}</td><td>0.4428675415</td></tr>
+                <tr><td>16</td><td>120</td><td>12</td><td>286</td><td>{'libya', 'turkey', 'sdg', 'remitt', 'humanitarian', 'philanthropi', 'syria', 'airdrop', 'reproduct', 'darayya', 'rohingya', 'aid', 'displac', 'muslim', 'ricu'}</td><td>0.34546681367</td></tr>
+                <tr><td>17</td><td>118</td><td>2</td><td>696</td><td>{'ehic', 'irish', 'ttip', 'eu', 'ireland', 'churchil'}</td><td>0.387326628322</td></tr>
+                <tr><td>18</td><td>113</td><td>8</td><td>341</td><td>{'healthcar', 'diabet', 'cancer', 'mental', 'elearn', 'chariti', 'social', 'lidbett', 'care', 'carer', 'discharg', 'stockport', 'poison', 'enterpris', 'nh', 'bed', 'fistula', 'agedcar', 'suicid', 'health'}</td><td>0.458486020373</td></tr>
+                <tr><td>19</td><td>96</td><td>14</td><td>257</td><td>{'whittingdal', 'bbc', 'puttnam', 'birmingham', 'scotland', 'bame', 'radio', 'channel', 'linsey', 'viewer', 'recip', 'patten', 'respublica'}</td><td>0.604813431267</td></tr>
+                <tr><td>20</td><td>95</td><td>11</td><td>295</td><td>{'book', 'itch', 'hazel', 'trina', 'bee', 'alfi', 'd’evil', 'ricki', 'garvi', 'audrey'}</td><td>0.406196429941</td></tr>
+                <tr><td>21</td><td>85</td><td>16</td><td>212</td><td>{'court', 'kennet', 'prison', 'habré', 'cannabi', 'mohammadi', 'injunct', 'whistleblow', 'guzmán'}</td><td>0.394819392813</td></tr>
+                <tr><td>22</td><td>84</td><td>13</td><td>258</td><td>{'nsw', 'oakland', 'o’dea', 'porn', 'ira', 'khaja', 'mosbi', 'pcc', 'inquest', 'dog', 'orgreav', 'polic', 'emanuel', 'hillsborough'}</td><td>0.434740877834</td></tr>
+                <tr><td>23</td><td>83</td><td>1</td><td>1041</td><td>{'huppert', 'theatr'}</td><td>0.142884421052</td></tr>
+                <tr><td>24</td><td>81</td><td>9</td><td>302</td><td>{'pension', 'tata', 'steel', 'monsanto', 'store', 'retail', 'barclay', 'mitsubishi', 'putopt', 'sainsbury’', 'bh', 'mortgag'}</td><td>0.338867476615</td></tr>
+                <tr><td>25</td><td>81</td><td>21</td><td>108</td><td>{'king', 'khakhar’', 'tree', 'kahn’', 'museum', 'devaney', 'lassnig', 'art', 'artist', 'paint', 'courtauld', 'flemish', 'tjcruda', 'hockney', 'tate', 'hatoum', 'sherman', 'khakhar', 'marisol', 'gonzaleztorr', 'ra', 'rejland', 'herzog', '“untitled”', 'ackermann', 'bacon', 'glass'}</td><td>0.534583582583</td></tr>
+                <tr><td>26</td><td>77</td><td>44</td><td>4</td><td>{'sperm', 'whale', 'speci'}</td><td>0.227921152919</td></tr>
+                <tr><td>27</td><td>75</td><td>45</td><td>4</td><td>{'westerham', 'norwood'}</td><td>0.230940107676</td></tr>
+                <tr><td>28</td><td>71</td><td>3</td><td>647</td><td>{'cincinnati', 'season', 'xia', 'leagu', 'martínez', 'g'}</td><td>0.293940368814</td></tr>
+                <tr><td>29</td><td>70</td><td>20</td><td>118</td><td>{'wicket', 'amir', 'ball', 'bairstow', 'sri', 'hale', 'jaywarden', 'av', 'herath', 'mathew', 'shanaka', 'woak', 'finn', 'gubbin', 'test', 'vinc', 'saqlain', 'bowler', 'cricket', 'anderson', 'cook', 'sangakkara', 'panesar', 'livingston', 'bat', 'moeen', 'compton'}</td><td>0.770207984237</td></tr>
+                <tr><td>30</td><td>69</td><td>23</td><td>99</td><td>{'breeders’', 'nemoralia', 'allweath', 'snow', 'moor', 'verdon', 'hors', 'derbi', 'frankel', 'turf', 'lucky15', 'epsom', 'galileo', 'burrow', 'nyquist', 'skiffl', 'chester', 'ascot', 'handicap', 'preak', 'oak', 'huntsman', 'stout', 'gosden', 'dunlop', 'o’brien', 'guinea', 'dar', 'cc', 'bolger', 'haydock', 'moonlight', 'midterm', 'race', 'kentucki', 'port', 'mi', 'cunco', 'payn', 'dougla'}</td><td>0.725954008641</td></tr>
               </tbody>
             </table>
           </div>
@@ -293,141 +391,49 @@
 
         <div class="row">
           <div class="col-xs-12">
-            <h3>Comparison of top 50 topics between Modularity and LCM: Sort by Topic Size</h3>
+            <h3>Matching top 30 LDA labels to LCM labels.</h3>
             <table class="table">
               <thead>
                 <tr>
-                  <td>#</td>
-                  <td>Modularity Label</td>
-                  <td>Modularity Size</td>
-                  <td>Modularity Keywords</td>
-                  <td>LCM Label</td>
-                  <td>LCM Size</td>
-                  <td>LCM Keywords</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>1</td><td>6</td><td>612</td><td>'g', 'season', 'mourinho', 'warnock', 'arteta', 'ranieri', 'rodger', 'pochettino', 'thai', 'morri'</td><td>6</td><td>857</td><td>'g', 'season', 'kooiman', 'temperley', 'pite', 'mourinho', 'knox', 'itoj', 'curri', 'warnock'</td></tr>
-                <tr><td>2</td><td>170</td><td>494</td><td>'fundrais', 'dr', 'fundrais', 'therapist', 'oxygen', 'discharg', 'anxieti', 'anxieti', 'diabet', 'suicid'</td><td>87</td><td>805</td><td>'gingham', 'necklac', 'dada', 'dragon', 'stubbl', 'homer', 'trevelyan', 'kenzo', 'frodo', 'wed'</td></tr>
-                <tr><td>3</td><td>89</td><td>487</td><td>'antonia', 'cv', 'disabl', 'talktalk', '7eleven', 'ucu', 'binoch', 'ldc', 'disabl', 'abort'</td><td>73</td><td>711</td><td>'vegan', 'potti', 'tattoo', 'alix', 'rat', 'valentino', 'chat', 'antonia', 'therapist', 'throne'</td></tr>
-                <tr><td>4</td><td>86</td><td>449</td><td>'hs2', 'siem', 'tobacco', 'tobacco', 'tax', 'hs2', 'cocoa', 'depp', 'wage', 'tax'</td><td>58</td><td>680</td><td>'mdb', 'fundrais', 'apprenticeship', 'saudi', 'prison', 'prison', 'fundrais', 'snowden', 'prison', 'disabl'</td></tr>
-                <tr><td>5</td><td>218</td><td>442</td><td>'churchil', 'ttip', 'ttip', 'sharia', 'export', 'ceta', 'enrol', 'rm', 'ehic', 'patten'</td><td>136</td><td>567</td><td>'sock', 'parent', 'churchil', 'harari', 'doomerang', 'tran', 'ttip', 'ttip', 'abort', 'dutert'</td></tr>
-                <tr><td>6</td><td>11</td><td>396</td><td>'homeless', 'mayweath', 'leasehold', 'muslim', 'council', 'homeless', 'parish', 'tfl', 'ricu', 'mosqu'</td><td>13</td><td>458</td><td>'ridsdal', 'curfew', 'bundi', 'uae', 'ghomeshi', 'wolverin', 'ratner', 'freita', 'bahá’í', 'lupidi'</td></tr>
-                <tr><td>7</td><td>207</td><td>376</td><td>'soundcloud', 'wed', 'pite', 'lassnig', 'art', 'dane', 'festiv', 'eavi', 'franzen', 'ipod'</td><td>79</td><td>383</td><td>'invoic', 'bauer', 'soundcloud', 'barclay', 'mortgag', 'tobacco', 'solar', 'poverti', 'mortgag', 'gannett'</td></tr>
-                <tr><td>8</td><td>96</td><td>318</td><td>'mdb', 'pollut', 'coral', 'seafood', 'reef', 'batteri', 'belgrad', 'csiro', 'acidif', 'plastic'</td><td>76</td><td>273</td><td>'eavi', 'blair', 'rotherham', 'ehic', 'patten', 'displac', 'refuge', 'bower', 'ttip', 'ttip'</td></tr>
-                <tr><td>9</td><td>81</td><td>313</td><td>'tuesday', 'friday', 'friday', 'friday', 'wednesday', 'wednesday', 'wednesday', 'wednesday', 'tuesday', 'tuesday'</td><td>99</td><td>263</td><td>'homeless', 'palmer', 'sharia', 'refuge', 'tax', 'refuge', 'guthri', 'wage', 'agedcar', 'seat'</td></tr>
-                <tr><td>10</td><td>97</td><td>298</td><td>'mnuchin', 'perez', 'thiel', 'obituari', 'gun', 'gun', 'rubio', 'sarandon', 'pac', 'meme'</td><td>108</td><td>255</td><td>'obituari', 'gun', 'rubio', 'sarandon', 'pac', 'ulay', 'meme', 'rubio', 'gold', 'rubio'</td></tr>
-                <tr><td>11</td><td>216</td><td>275</td><td>'librari', 'dragon', 'bee', 'tip', 'fawcettflatsfriday', 'cat', 'bangladesh', 'itch', 'heel', 'plot'</td><td>90</td><td>232</td><td>'hs2', 'reef', 'contrail', 'batteri', 'acidif', 'hyperloop', 'reef', 'flint', 'corbi', 'energi'</td></tr>
-                <tr><td>12</td><td>49</td><td>257</td><td>'saudi', 'journalist', 'refuge', 'humanitarian', 'refuge', 'jacket', 'refuge', 'saudi', 'humanitarian', 'airdrop'</td><td>121</td><td>202</td><td>'galá', 'spotifi', 'mustonen', 'punk', 'spotifi', 'skepta', 'prometheu', 'donen', 'andsn', 'ginsberg'</td></tr>
-                <tr><td>13</td><td>172</td><td>253</td><td>'tattoo', 'ridsdal', 'valentino', 'masturb', 'bundi', 'dog', 'porn', 'sulli', 'kincora', 'lyst'</td><td>67</td><td>188</td><td>'hatoum', 'barrow', 'thorp', 'mcdowel', 'hodgkin', 'fisk', 'grotto', 'kwouk', 'binchi', 'whicker'</td></tr>
-                <tr><td>14</td><td>178</td><td>245</td><td>'password', 'snowden', 'abc', 'curri', 'raptor', 'warcraft', 'embarrass', 'guthri', 'spur', 'ling'</td><td>97</td><td>171</td><td>'pelé', 'warcraft', 'toy', 'halloween', 'hathaway', 'lego', 'comic', 'wareheim', 'mcavoy', 'wright'</td></tr>
-                <tr><td>15</td><td>191</td><td>200</td><td>'cannabi', 'prison', 'prison', 'pelé', 'antibiot', 'prison', 'prison', 'prison', 'prison', 'ratner'</td><td>124</td><td>168</td><td>'ree', 'pcc', 'antisemit', 'plaid', 'plaid', 'council', 'scottish', 'labour', 'livingston', 'devolut'</td></tr>
-                <tr><td>16</td><td>83</td><td>178</td><td>'parent', 'tran', 'nolan', 'hyman', 'unrwa', 'teacher', 'duckworth', 'guardianteach', 'breakfast', 'school'</td><td>70</td><td>125</td><td>'tyre', 'crm', 'cv', 'data', 'adblock', 'hyperloop', 'quantum', 'tampon', 'export', 'morag'</td></tr>
-                <tr><td>17</td><td>36</td><td>160</td><td>'bbc', 'bbc', 'bbc', 'bbc', 'recip', 'bbc', 'bbc', 'bbc', 'grundi', 'birmingham'</td><td>128</td><td>121</td><td>'hertz', 'bbc', 'bbc', 'hertz', 'bbc', 'bbc', 'bbc', 'bbc', 'bbc', 'birmingham'</td></tr>
-                <tr><td>18</td><td>164</td><td>141</td><td>'pension', 'steel', 'pension', 'glyphos', 'bh', 'tata', 'bh', 'tata', 'asda', 'bh'</td><td>56</td><td>113</td><td>'huel', 'falafel', 'garden', 'turmer', 'garden', 'garden', 'miso', 'recip', 'egg', 'food'</td></tr>
-                <tr><td>19</td><td>186</td><td>135</td><td>'drone', 'mansoor', 'iceland', 'interpret', 'uber', 'hekmatyar', 'ev', 'rosberg', 'drone', 'uber'</td><td>16</td><td>90</td><td>'mathew', 'gayl', 'compton', 'stoke', 'shanaka', 'bairstow', 'panesar', 'wicket', 'wicket', 'cook'</td></tr>
-                <tr><td>20</td><td>152</td><td>134</td><td>'itoj', 'ebner', 'hayn', 'hayn', 'corbisiero', '•', 'widn', 'haggerti', 'mcshane', '•'</td><td>86</td><td>79</td><td>'leasehold', 'council', 'homeless', 'shoe', 'cashback', 'talktalk', 'tfl', 'rent', 'skoda', 'homeless'</td></tr>
-                <tr><td>21</td><td>215</td><td>132</td><td>'hertz', 'bauer', 'hertz', 'eurovis', 'tudor', 'scilli', 'cunk', 'weinstein', 'deen', 'peston'</td><td>81</td><td>76</td><td>'antibiot', 'oxygen', 'mayweath', 'fistula', 'baka', 'mbsr', 'diabet', 'vertigo', 'transplant', 'mayweath'</td></tr>
-                <tr><td>22</td><td>194</td><td>114</td><td>'schipper', 'diamond', 'hyperloop', 'knox', 'hyperloop', 'mcilroy', 'gasol', 'spieth', 'clara', 'pendleton'</td><td>104</td><td>76</td><td>'gchq', 'lyst', 'app', 'instagram', 'mulkentin', 'møller', 'browser', 'tech', 'thiel', 'kadyrov'</td></tr>
-                <tr><td>23</td><td>125</td><td>110</td><td>'mathew', 'gayl', 'gayl', 'compton', 'stoke', 'panesar', 'cemeteri', 'shanaka', 'cemeteri', 'bairstow'</td><td>72</td><td>70</td><td>'wednesday', 'wednesday', 'wednesday', 'wednesday', 'djokov', 'rosberg', 'beden', 'mladenov', 'murray', 'mercuri'</td></tr>
-                <tr><td>24</td><td>76</td><td>104</td><td>'vegan', 'vegan', 'vegan', 'turmer', 'embryo', 'miso', 'egg', 'skin', 'chees', 'pastri'</td><td>31</td><td>65</td><td>'noseband', 'fallon', 'nyquist', 'race', 'allweath', 'gosden', 'derbi', 'derbi', 'frankel', 'ride'</td></tr>
-                <tr><td>25</td><td>92</td><td>102</td><td>'barrow', 'langley', 'award', 'morag', 'noorjji', 'moya', 'salmon', 'angharad', 'koalapak', 'roasteri'</td><td>132</td><td>58</td><td>'cannabi', 'binoch', 'prison', 'refn', 'farrow', 'drug', 'sarandon', 'prison', 'drug', 'cannabi'</td></tr>
-                <tr><td>26</td><td>150</td><td>98</td><td>'fallon', 'nyquist', 'allweath', 'gosden', 'payn', 'derbi', 'derbi', 'frankel', 'payn', 'ride'</td><td>68</td><td>56</td><td>'steel', 'airdrop', 'falluja', 'tamkeen', 'tata', 'tata', 'isi', 'steel', 'steel', 'darayya'</td></tr>
-                <tr><td>27</td><td>160</td><td>96</td><td>'garden', 'garden', 'garden', 'ranger', 'eleph', 'ivori', 'indigen', 'squirrel', 'plant', 'rhino'</td><td>40</td><td>49</td><td>'poll', 'muslim', 'khan', 'muslim', 'zylinski', 'ree', 'goldsmith', 'mcgowan', 'vote', 'khan'</td></tr>
-                <tr><td>28</td><td>115</td><td>65</td><td>'tsa', 'spider', 'hedg', 'mh370', 'flight', 'turtl', 'turtl', 'spider', 'chocolat', 'menzio'</td><td>60</td><td>37</td><td>'orgreav', 'polic', 'db', 'junior', 'junior', 'rainsbrook', 'orgreav', 'junior', 'junior', 'junior'</td></tr>
-                <tr><td>29</td><td>117</td><td>55</td><td>'apprenticeship', 'church', 'grotto', 'bt', 'archdioces', 'hitchen', 'bt', 'faith', 'priest', 'bond'</td><td>103</td><td>31</td><td>'bear', 'vang', 'vieng', 'mcmurray', 'mcmurray', 'volcano', 'fort', 'hellisheiði', 'bomb', 'tyre'</td></tr>
-                <tr><td>30</td><td>118</td><td>53</td><td>'tenni', 'djokov', 'beden', 'mauresmo', 'mladenov', 'murray', 'murray', 'murray', 'djokov', 'murray'</td><td>35</td><td>30</td><td>'mh370', 'guam', 'menzio', 'rescreen', 'egyptian', 'passeng', 'helicopt', 'passeng', 'egyptian', 'airport'</td></tr>
-                <tr><td>31</td><td>168</td><td>50</td><td>'wolverin', 'xmen', 'comic', 'helberg', 'florenc', 'preacher', 'superhero', 'dc', 'batman', 'pullman'</td><td>39</td><td>30</td><td>'lamprey', 'leopard', 'crocodil', 'mascara', 'aruba', 'abv', 'cleethorp', 'cabin', 'nile', 'crocodil'</td></tr>
-                <tr><td>32</td><td>211</td><td>43</td><td>'dada', 'poetri', 'poetri', 'greec', 'poem', 'plath’', 'debt', 'debt', 'biennal', 'duffi'</td><td>105</td><td>30</td><td>'osbourn', 'maduro', 'mujica', 'maduro', 'rousseff', 'sebag', 'romanov', 'montefior', 'maduro', 'rio'</td></tr>
-                <tr><td>33</td><td>161</td><td>28</td><td>'debentur', 'ticket', 'ticket', 'crossword', 'resel', 'crossword', 'fashion', 'cryptic', 'crossword', 'ticket'</td><td>27</td><td>28</td><td>'9pm', 'deepcut', 'cruickshank', '9pm', '9pm', 'stauffenberg', '9pm', '9pm', 'biker', 'howlett'</td></tr>
-                <tr><td>34</td><td>112</td><td>21</td><td>'hutterit', 'fpö', 'hofer', 'bellen', 'hofer', 'hofer', 'bellen', 'der', 'fpö', 'der'</td><td>98</td><td>28</td><td>'pollut', 'eastbourn', 'pollut', 'pollut', 'pollut', 'pollut', 'pollut', 'pollut', 'monitor', 'pollut'</td></tr>
-                <tr><td>35</td><td>29</td><td>20</td><td>'rawabi', 'netanyahu', 'palestinian', 'palestinian', 'lieberman', 'hinn', 'hama', 'palestinian', 'gaza', 'isra'</td><td>77</td><td>27</td><td>'cartmel', 'rainbow', 'vivr', 'atalan', 'annigoni', 'roania', 'heresmynumb', 'altess', 'vaquera', 'cottersrock'</td></tr>
-                <tr><td>36</td><td>51</td><td>20</td><td>'aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'dann', 'cabay', 'aug'</td><td>17</td><td>23</td><td>'miso', 'caramelis', 'raspberri', '‘feast’', '‘bloom’', '‘acrobatic’', '‘bold’', 'guardianwit', 'review', 'guardianwit'</td></tr>
-                <tr><td>37</td><td>114</td><td>16</td><td>'bitcoin', 'bitcoin', 'bitcoin', 'bitcoin', 'kabila', 'wright', 'spacey', 'wright', 'bitcoin', 'wright'</td><td>78</td><td>23</td><td>'schipper', 'mcilroy', 'gasol', 'pendleton', 'peati', 'johnsonthompson', 'olymp', 'sayer', 'shields’', 'adlington'</td></tr>
-                <tr><td>38</td><td>144</td><td>12</td><td>'throne', 'jon', '“r', 'tyrel', 'j”', 'sansa', 'dani', 'jaim', 'hodor', 'lyanna'</td><td>30</td><td>22</td><td>'houghton', 'fpö', 'hofer', 'bellen', 'hofer', 'bellen', 'der', 'fpö', 'der', 'der'</td></tr>
-                <tr><td>39</td><td>80</td><td>11</td><td>'chibok', 'chibok', 'haram', 'giwa', 'boko', 'nkeki', 'boko', 'haram', 'chibok', 'boko'</td><td>120</td><td>21</td><td>'bt', 'window', 'window', 'window', 'tablet', 'v8', 'router', 'app', 'upgrad', 'tablet'</td></tr>
-                <tr><td>40</td><td>44</td><td>8</td><td>'ufc', 'mayweath', 'mcgregor', 'ufc', 'editor', 'mcgregor', 'mullin', 'ufc', 'ufc', 'editor'</td><td>84</td><td>19</td><td>'aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'aug', 'knee', 'knee'</td></tr>
-                <tr><td>41</td><td>57</td><td>8</td><td>'3x3', '3x3', '3x3', '3x3', '83', '83', '83', '83', 'grid', 'grid'</td><td>12</td><td>18</td><td>'bha', 'bha', 'bha', 'hekmatyar', 'bha', 'lohn', 'mansoor', 'mansoor', 'firoza', 'bha'</td></tr>
-                <tr><td>42</td><td>141</td><td>8</td><td>'climb', 'climber', 'climber', 'coxsey', 'climber', 'everest', 'everest', 'everest', 'sherpa', 'climb'</td><td>4</td><td>16</td><td>'bbc', 'raid', 'patten', 'bbc', 'bbc', 'brampton', 'bbc', 'tv', 'fraud', 'buffett'</td></tr>
-                <tr><td>43</td><td>33</td><td>7</td><td>'alicia', 'cum', 'celia', 'alicia', 'travi', 'madison', 'nick', 'alicia', 'zombi', 'travi'</td><td>59</td><td>16</td><td>'butler', 'butler', 'arpaio', 'butler', 'butler', 'hellerstein', 'butler', 'butler', 'butler', 'butler'</td></tr>
-                <tr><td>44</td><td>142</td><td>7</td><td>'bha', 'bha', 'bha', 'bha', 'lohn', 'bha', 'lohn', 'bha', 'bha', 'disciplinari'</td><td>101</td><td>14</td><td>'eurovis', 'eurovis', 'attenborough', 'tatar', 'eurovis', 'eurovis', 'eurovis', 'eurovis', 'wingham', 'tatar'</td></tr>
-                <tr><td>45</td><td>155</td><td>7</td><td>'harari', 'robot', 'robot', 'zora', 'robot', 'capit', 'deblieck', 'em', 'ubi', 'robot'</td><td>131</td><td>12</td><td>'greec', 'debt', 'debt', 'tax', 'pitsiorla', 'bailout', 'greec', 'debt', 'creditor', 'greece’'</td></tr>
-                <tr><td>46</td><td>137</td><td>6</td><td>'gustav', 'mattia', 'gustav', 'tremain', 'mattia', 'gustav', 'magnu', 'sofia', 'anton', 'verita'</td><td>10</td><td>11</td><td>'badreddin', 'chibok', 'badreddin', 'chibok', 'nkeki', 'badreddin', 'hezbollah', 'chibok', 'hezbollah', 'boko'</td></tr>
-                <tr><td>47</td><td>176</td><td>6</td><td>'dress', 'yellow', 'yellow', 'dress', 'azaelea', 'carpet', 'ball', 'umpir', 'ref', 'lawri'</td><td>75</td><td>11</td><td>'ioc', 'diack', 'diack', 'reedi', 'olymp', 'athlet', 'iaaf', 'tokyo', 'massata', 'ioc'</td></tr>
-                <tr><td>48</td><td>55</td><td>5</td><td>'anag', 'anag', 'anag', 'anag', 'def', 'def', 'anag', 'd', 'rev', 'meddlesom'</td><td>21</td><td>10</td><td>'leblanc', 'cleese’', 'evan', 'evan', 'evan', 'pollardmansergh', 'evan', 'clarkson', 'clees', 'leblanc'</td></tr>
-                <tr><td>49</td><td>68</td><td>5</td><td>'princ', 'windsor', 'harri', 'hors', 'delud', 'kate', 'tesco', 'pippa', 'enfield', 'fool”'</td><td>34</td><td>9</td><td>'nayfack', 'transgend', 'transgend', 'gopstein', 'transgend', 'lehava', 'student', 'transgend', 'carolina', 'transgend'</td></tr>
-                <tr><td>50</td><td>223</td><td>5</td><td>'ilga', 'lgbti', 'azerbaijan', 'lgbti', 'convict', 'intersex', 'lgbti', 'convict', 'expung', 'homosexu'</td><td>134</td><td>9</td><td>'shoot', 'lightn', 'gun', 'cctvnew', 'boat', 'temperatur', 'storm', 'violenc', 'shipwreck', 'mass'</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Matching top 50 network labels with LDA labels.</h3>
-            <table class="table">
-              <thead>
-                <tr>
-                  <td>Modularity Label</td>
-                  <td>Modularity Size</td>
-                  <td>Modularity Keywords</td>
                   <td>LDA Label</td>
                   <td>LDA Size</td>
-                  <td>LDA Keywords</td>
-                  <td>Cosine Similarity</td>
+                  <td>LCM Label</td>
+                  <td>LCM Size</td>
+                  <td>Similar Keywords</td>
+                  <td>Cosine Similarity of Documents</td>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>6</td><td>612</td><td>['g', 'season', 'mourinho', 'warnock', 'arteta', 'ranieri', 'rodger', 'pochettino', 'thai', 'morri']</td><td>11</td><td>313</td><td>['g', 'season', 'ranieri', 'pellegrini', 'bt', 'koeman', 'snodgrass', 'sturridg', 'preseason', 'xia']</td><td>0.648889071961</td></tr>
-                <tr><td>170</td><td>494</td><td>['fundrais', 'dr', 'fundrais', 'therapist', 'oxygen', 'discharg', 'anxieti', 'anxieti', 'diabet', 'suicid']</td><td>114</td><td>339</td><td>['fundrais', 'apprenticeship', 'tyre', 'prison', 'fundrais', 'disabl', 'homeless', 'disabl', 'humanitarian', 'dementia']</td><td>0.268800060169</td></tr>
-                <tr><td>89</td><td>487</td><td>['antonia', 'cv', 'disabl', 'talktalk', '7eleven', 'ucu', 'binoch', 'ldc', 'disabl', 'abort']</td><td>217</td><td>16</td><td>['mortgag', 'mortgag', 'mortgag', 'loan', 'mortgag', 'crowther', 'interestonli', 'mortgag', 'expat', 'loan']</td><td>0.181257301772</td></tr>
-                <tr><td>86</td><td>449</td><td>['hs2', 'siem', 'tobacco', 'tobacco', 'tax', 'hs2', 'cocoa', 'depp', 'wage', 'tax']</td><td>22</td><td>109</td><td>['shorten', 'bishop', 'plebiscit', 'sufi', 'xenophon', 'turnbul', 'turnbul', 'labor', 'shorten', 'bandt']</td><td>0.461066695059</td></tr>
-                <tr><td>218</td><td>442</td><td>['churchil', 'ttip', 'ttip', 'sharia', 'export', 'ceta', 'enrol', 'rm', 'ehic', 'patten']</td><td>118</td><td>188</td><td>['churchil', 'rotherham', 'ehic', 'ttip', 'eu', 'irish', 'tax', 'eu', 'imf', 'eu']</td><td>0.596675749897</td></tr>
-                <tr><td>11</td><td>396</td><td>['homeless', 'mayweath', 'leasehold', 'muslim', 'council', 'homeless', 'parish', 'tfl', 'ricu', 'mosqu']</td><td>52</td><td>138</td><td>['pcc', 'plaid', 'plaid', 'scottish', 'labour', 'ree', 'labour', 'mp', 'labour', 'zane']</td><td>0.568937427593</td></tr>
-                <tr><td>207</td><td>376</td><td>['soundcloud', 'wed', 'pite', 'lassnig', 'art', 'dane', 'festiv', 'eavi', 'franzen', 'ipod']</td><td>190</td><td>1147</td><td>['potti', 'dada', 'tattoo', 'dragon', 'rat', 'valentino', 'goat', 'antonia', 'throne', 'koosha']</td><td>0.181205481061</td></tr>
-                <tr><td>96</td><td>318</td><td>['mdb', 'pollut', 'coral', 'seafood', 'reef', 'batteri', 'belgrad', 'csiro', 'acidif', 'plastic']</td><td>150</td><td>42</td><td>['coral', 'reef', 'batteri', 'reef', 'solar', 'energi', 'lithium', 'renew', 'reef', 'messel']</td><td>0.320157381185</td></tr>
-                <tr><td>81</td><td>313</td><td>['tuesday', 'friday', 'friday', 'friday', 'wednesday', 'wednesday', 'wednesday', 'wednesday', 'tuesday', 'tuesday']</td><td>202</td><td>172</td><td>['crm', 'emoji', 'cv', 'data', 'adblock', 'quantum', 'plastic', 'tampon', 'export', 'morag']</td><td>0.215493220733</td></tr>
-                <tr><td>97</td><td>298</td><td>['mnuchin', 'perez', 'thiel', 'obituari', 'gun', 'gun', 'rubio', 'sarandon', 'pac', 'meme']</td><td>99</td><td>192</td><td>['mnuchin', 'rubio', 'sarandon', 'pac', 'meme', 'rubio', 'rubio', 'adelson', 'biden', 'coloradocar']</td><td>0.769235071404</td></tr>
-                <tr><td>216</td><td>275</td><td>['librari', 'dragon', 'bee', 'tip', 'fawcettflatsfriday', 'cat', 'bangladesh', 'itch', 'heel', 'plot']</td><td>69</td><td>28</td><td>['miso', 'caramelis', 'raspberri', '‘feast’', '‘bloom’', '‘acrobatic’', '‘bold’', 'referendum', 'guardianwit', 'review']</td><td>0.319089614087</td></tr>
-                <tr><td>49</td><td>257</td><td>['saudi', 'journalist', 'refuge', 'humanitarian', 'refuge', 'jacket', 'refuge', 'saudi', 'humanitarian', 'airdrop']</td><td>9</td><td>19</td><td>['tamkeen', 'isi', 'haram', 'boko', 'libya', 'isi', 'falluja', 'libyan', 'wahib', 'assad']</td><td>0.257590085326</td></tr>
-                <tr><td>172</td><td>253</td><td>['tattoo', 'ridsdal', 'valentino', 'masturb', 'bundi', 'dog', 'porn', 'sulli', 'kincora', 'lyst']</td><td>77</td><td>471</td><td>['curfew', 'bundi', 'uae', 'ghomeshi', 'wolverin', 'ratner', 'fujimori', 'freita', 'bahá’í', 'lupidi']</td><td>0.315759033297</td></tr>
-                <tr><td>178</td><td>245</td><td>['password', 'snowden', 'abc', 'curri', 'raptor', 'warcraft', 'embarrass', 'guthri', 'spur', 'ling']</td><td>119</td><td>17</td><td>['hiroshima', 'vietnam', 'nuclear', 'china', 'nuclear', 'vietnam', 'hong', 'hiroshima', 'nuclear', 'korean']</td><td>0.23242549052</td></tr>
-                <tr><td>191</td><td>200</td><td>['cannabi', 'prison', 'prison', 'pelé', 'antibiot', 'prison', 'prison', 'prison', 'prison', 'ratner']</td><td>3</td><td>21</td><td>['cannabi', 'prison', 'drug', 'marijuana', 'drug', 'cannabi', 'zee', 'mamamia', 'marijuana', 'moberg']</td><td>0.277746029932</td></tr>
-                <tr><td>83</td><td>178</td><td>['parent', 'tran', 'nolan', 'hyman', 'unrwa', 'teacher', 'duckworth', 'guardianteach', 'breakfast', 'school']</td><td>102</td><td>31</td><td>['hyman', 'unrwa', 'nurofen', 'school', 'school', 'aurukun', 'nash', 'school', 'riddel', 'saudi']</td><td>0.376935623066</td></tr>
-                <tr><td>36</td><td>160</td><td>['bbc', 'bbc', 'bbc', 'bbc', 'recip', 'bbc', 'bbc', 'bbc', 'grundi', 'birmingham']</td><td>55</td><td>118</td><td>['hertz', 'bbc', 'hertz', 'bbc', 'bbc', 'bbc', 'bbc', 'birmingham', 'patten', 'bbc']</td><td>0.705944793059</td></tr>
-                <tr><td>164</td><td>141</td><td>['pension', 'steel', 'pension', 'glyphos', 'bh', 'tata', 'bh', 'tata', 'asda', 'bh']</td><td>125</td><td>37</td><td>['pension', 'dolphin', 'bh', 'bh', 'bh', 'bh', 'bh', 'bight', 'bh', 'pension']</td><td>0.443036553538</td></tr>
-                <tr><td>186</td><td>135</td><td>['drone', 'mansoor', 'iceland', 'interpret', 'uber', 'hekmatyar', 'ev', 'rosberg', 'drone', 'uber']</td><td>112</td><td>18</td><td>['rosberg', 'mercuri', 'gibson', 'rosberg', 'verstappen', 'rosberg', 'guardianwit', 'hamilton', 'stalin', 'monaco']</td><td>0.263718268428</td></tr>
-                <tr><td>152</td><td>134</td><td>['itoj', 'ebner', 'hayn', 'hayn', 'corbisiero', '•', 'widn', 'haggerti', 'mcshane', '•']</td><td>59</td><td>315</td><td>['kooiman', 'schipper', 'pite', 'knox', 'itoj', 'curri', 'warnock', 'raptor', 'ebner', 'arteta']</td><td>0.262836747146</td></tr>
-                <tr><td>215</td><td>132</td><td>['hertz', 'bauer', 'hertz', 'eurovis', 'tudor', 'scilli', 'cunk', 'weinstein', 'deen', 'peston']</td><td>203</td><td>15</td><td>['eurovis', 'eurovis', 'eurovis', 'eurovis', 'eurovis', 'attenborough', 'eurovis', 'eurovis', 'eurovis', 'wingham']</td><td>0.247206616237</td></tr>
-                <tr><td>194</td><td>114</td><td>['schipper', 'diamond', 'hyperloop', 'knox', 'hyperloop', 'mcilroy', 'gasol', 'spieth', 'clara', 'pendleton']</td><td>72</td><td>17</td><td>['shkreli', 'garden', 'ioc', 'diack', 'diack', 'reedi', 'athlet', 'athlet', 'olymp', 'athlet']</td><td>0.318017595297</td></tr>
-                <tr><td>125</td><td>110</td><td>['mathew', 'gayl', 'gayl', 'compton', 'stoke', 'panesar', 'cemeteri', 'shanaka', 'cemeteri', 'bairstow']</td><td>128</td><td>78</td><td>['mathew', 'compton', 'shanaka', 'bairstow', 'panesar', 'wicket', 'wicket', 'cook', 'sangakkara', 'grave']</td><td>0.831279520393</td></tr>
-                <tr><td>76</td><td>104</td><td>['vegan', 'vegan', 'vegan', 'turmer', 'embryo', 'miso', 'egg', 'skin', 'chees', 'pastri']</td><td>75</td><td>68</td><td>['falafel', 'miso', 'recip', 'egg', 'pectin', 'pastri', 'macaroni', 'cake', 'thai', 'vegan']</td><td>0.582673080339</td></tr>
-                <tr><td>92</td><td>102</td><td>['barrow', 'langley', 'award', 'morag', 'noorjji', 'moya', 'salmon', 'angharad', 'koalapak', 'roasteri']</td><td>62</td><td>48</td><td>['award', 'koalapak', 'roasteri', 'piano', 'prize', 'runner', 'gnm', 'tash', 'longleat', 'prize']</td><td>0.500204206666</td></tr>
-                <tr><td>150</td><td>98</td><td>['fallon', 'nyquist', 'allweath', 'gosden', 'payn', 'derbi', 'derbi', 'frankel', 'payn', 'ride']</td><td>185</td><td>70</td><td>['noseband', 'frederik', 'fallon', 'nyquist', 'comet', 'allweath', 'gosden', 'payn', 'derbi', 'derbi']</td><td>0.784786093676</td></tr>
-                <tr><td>160</td><td>96</td><td>['garden', 'garden', 'garden', 'ranger', 'eleph', 'ivori', 'indigen', 'squirrel', 'plant', 'rhino']</td><td>151</td><td>16</td><td>['garden', 'garden', 'garden', 'garden', 'garden', 'meadow', 'garden', 'norwood', 'garden', 'beetl']</td><td>0.331701736002</td></tr>
-                <tr><td>115</td><td>65</td><td>['tsa', 'spider', 'hedg', 'mh370', 'flight', 'turtl', 'turtl', 'spider', 'chocolat', 'menzio']</td><td>139</td><td>37</td><td>['drone', 'mh370', 'guam', 'moroccan', 'rescreen', 'egyptian', 'passeng', 'helicopt', 'naukrati', 'crew']</td><td>0.632126727472</td></tr>
-                <tr><td>117</td><td>55</td><td>['apprenticeship', 'church', 'grotto', 'bt', 'archdioces', 'hitchen', 'bt', 'faith', 'priest', 'bond']</td><td>95</td><td>2</td><td>['bianchi', 'pope', 'mcelwe', 'priest', 'deacon', 'deaco', 'church', 'ordain', 'women', 'poster']</td><td>0.190692517849</td></tr>
-                <tr><td>118</td><td>53</td><td>['tenni', 'djokov', 'beden', 'mauresmo', 'mladenov', 'murray', 'murray', 'murray', 'djokov', 'murray']</td><td>66</td><td>37</td><td>['wednesday', 'wednesday', 'tenni', 'djokov', 'beden', 'murray', 'murray', 'djokov', 'roger', 'player']</td><td>0.745203941092</td></tr>
-                <tr><td>168</td><td>50</td><td>['wolverin', 'xmen', 'comic', 'helberg', 'florenc', 'preacher', 'superhero', 'dc', 'batman', 'pullman']</td><td>170</td><td>153</td><td>['thiel', 'warcraft', 'toy', 'tubman', 'kwouk', 'halloween', 'hathaway', 'vikand', 'kwouk', 'comic']</td><td>0.297264214247</td></tr>
-                <tr><td>211</td><td>43</td><td>['dada', 'poetri', 'poetri', 'greec', 'poem', 'plath’', 'debt', 'debt', 'biennal', 'duffi']</td><td>165</td><td>13</td><td>['greec', 'debt', 'debt', 'tax', 'greek', 'bailout', 'abv', 'greec', 'debt', 'creditor']</td><td>0.422954934438</td></tr>
-                <tr><td>161</td><td>28</td><td>['debentur', 'ticket', 'ticket', 'crossword', 'resel', 'crossword', 'fashion', 'cryptic', 'crossword', 'ticket']</td><td>16</td><td>8</td><td>['ticket', 'soundcloud', 'ticket', 'ticket', 'ticket', 'allnba', 'tout', 'ljung', 'tout', 'tout']</td><td>0.334076552391</td></tr>
-                <tr><td>112</td><td>21</td><td>['hutterit', 'fpö', 'hofer', 'bellen', 'hofer', 'hofer', 'bellen', 'der', 'fpö', 'der']</td><td>18</td><td>19</td><td>['fpö', 'hofer', 'bellen', 'uktv', 'hofer', 'bellen', 'ufc', 'der', 'fpö', 'der']</td><td>0.801001878915</td></tr>
-                <tr><td>29</td><td>20</td><td>['rawabi', 'netanyahu', 'palestinian', 'palestinian', 'lieberman', 'hinn', 'hama', 'palestinian', 'gaza', 'isra']</td><td>87</td><td>11</td><td>['sugar', 'guarani', 'nayfack', 'lieberman', 'transgend', 'transgend', 'gopstein', 'transgend', 'lehava', 'student']</td><td>0.134839972493</td></tr>
-                <tr><td>51</td><td>20</td><td>['aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'dann', 'cabay', 'aug']</td><td>127</td><td>19</td><td>['aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'aug', 'knee', 'knee']</td><td>0.974679434481</td></tr>
-                <tr><td>114</td><td>16</td><td>['bitcoin', 'bitcoin', 'bitcoin', 'bitcoin', 'kabila', 'wright', 'spacey', 'wright', 'bitcoin', 'wright']</td><td>37</td><td>12</td><td>['bitcoin', 'bitcoin', 'bitcoin', 'vesuviu', 'zapata', 'wright', 'wright', 'bitcoin', 'bitcoin', 'bitcoin']</td><td>0.505181485541</td></tr>
-                <tr><td>144</td><td>12</td><td>['throne', 'jon', '“r', 'tyrel', 'j”', 'sansa', 'dani', 'jaim', 'hodor', 'lyanna']</td><td>60</td><td>16</td><td>['pelé', 'kendal', 'embryo', 'fertil', 'ivf', 'nargund', 'köhler', 'blyton', 'manchest', 'kaur']</td><td>0.0721687836487</td></tr>
-                <tr><td>80</td><td>11</td><td>['chibok', 'chibok', 'haram', 'giwa', 'boko', 'nkeki', 'boko', 'haram', 'chibok', 'boko']</td><td>1</td><td>13</td><td>['sulli', 'badreddin', 'chibok', 'badreddin', 'chibok', 'nkeki', 'badreddin', 'hezbollah', 'rescu', 'chibok']</td><td>0.585369407005</td></tr>
-                <tr><td>44</td><td>8</td><td>['ufc', 'mayweath', 'mcgregor', 'ufc', 'editor', 'mcgregor', 'mullin', 'ufc', 'ufc', 'editor']</td><td>18</td><td>19</td><td>['fpö', 'hofer', 'bellen', 'uktv', 'hofer', 'bellen', 'ufc', 'der', 'fpö', 'der']</td><td>0.0811107105654</td></tr>
-                <tr><td>57</td><td>8</td><td>['3x3', '3x3', '3x3', '3x3', '83', '83', '83', '83', 'grid', 'grid']</td><td>176</td><td>5</td><td>['masturb', '3x3', '3x3', '3x3', '3x3', 'grid', 'grid', 'grid', 'grid', 'puzzl']</td><td>0.632455532034</td></tr>
-                <tr><td>141</td><td>8</td><td>['climb', 'climber', 'climber', 'coxsey', 'climber', 'everest', 'everest', 'everest', 'sherpa', 'climb']</td><td>61</td><td>10</td><td>['climber', 'climber', 'hostelworld', 'mcilroy', 'climber', 'altidor', 'everest', 'everest', 'assassin’', 'hostel']</td><td>0.559016994375</td></tr>
-                <tr><td>33</td><td>7</td><td>['alicia', 'cum', 'celia', 'alicia', 'travi', 'madison', 'nick', 'alicia', 'zombi', 'travi']</td><td>190</td><td>1147</td><td>['potti', 'dada', 'tattoo', 'dragon', 'rat', 'valentino', 'goat', 'antonia', 'throne', 'koosha']</td><td>0.0446405217972</td></tr>
-                <tr><td>142</td><td>7</td><td>['bha', 'bha', 'bha', 'bha', 'lohn', 'bha', 'lohn', 'bha', 'bha', 'disciplinari']</td><td>171</td><td>16</td><td>['mansoor', 'bha', 'bha', 'bha', 'bha', 'lohn', 'mansoor', 'mansoor', 'bha', 'iran']</td><td>0.661437827766</td></tr>
-                <tr><td>155</td><td>7</td><td>['harari', 'robot', 'robot', 'zora', 'robot', 'capit', 'deblieck', 'em', 'ubi', 'robot']</td><td>202</td><td>172</td><td>['crm', 'emoji', 'cv', 'data', 'adblock', 'quantum', 'plastic', 'tampon', 'export', 'morag']</td><td>0.0864585626556</td></tr>
-                <tr><td>137</td><td>6</td><td>['gustav', 'mattia', 'gustav', 'tremain', 'mattia', 'gustav', 'magnu', 'sofia', 'anton', 'verita']</td><td>190</td><td>1147</td><td>['potti', 'dada', 'tattoo', 'dragon', 'rat', 'valentino', 'goat', 'antonia', 'throne', 'koosha']</td><td>0.0482172744015</td></tr>
-                <tr><td>176</td><td>6</td><td>['dress', 'yellow', 'yellow', 'dress', 'azaelea', 'carpet', 'ball', 'umpir', 'ref', 'lawri']</td><td>140</td><td>15</td><td>['gingham', 'diamond', 'jacket', 'civanto', 'petit', 'shirt', 'dress', 'petit', 'crop', 'blue']</td><td>0.105409255339</td></tr>
-                <tr><td>55</td><td>5</td><td>['anag', 'anag', 'anag', 'anag', 'def', 'def', 'anag', 'd', 'rev', 'meddlesom']</td><td>223</td><td>11</td><td>['anag', 'religion', 'anag', 'anag', 'zen', 'anag', 'rev', 'def', 'def', 'anag']</td><td>0.674199862463</td></tr>
-                <tr><td>68</td><td>5</td><td>['princ', 'windsor', 'harri', 'hors', 'delud', 'kate', 'tesco', 'pippa', 'enfield', 'fool”']</td><td>164</td><td>98</td><td>['gchq', 'baidu', 'abc', 'lyst', 'app', 'mm', 'instagram', 'mulkentin', 'møller', 'browser']</td><td>0.0451753951453</td></tr>
-                <tr><td>223</td><td>5</td><td>['ilga', 'lgbti', 'azerbaijan', 'lgbti', 'convict', 'intersex', 'lgbti', 'convict', 'expung', 'homosexu']</td><td>134</td><td>45</td><td>['embryo', 'abort', 'abort', 'interpret', 'abort', 'abort', 'patel', 'abort', 'abort', 'ilga']</td><td>0.0666666666667</td></tr>
+                <tr><td>1</td><td>898</td><td>1</td><td>823</td><td>{'scilli', 'mayweath', 'chees', 'rabih', 'sleepwalk', 'anxieti', 'hamster', 'frodo', 'funniest', 'antonia', 'wed', 'chat', 'potti', 'hellboy', 'husley', 'sock', 'cunk', 'shelli', 'eavi', 'heel', 'tattoo', 'itoj', 'throne', 'bambaataa', 'nolan', 'embarrass', 'harwood', 'vegan', 'alix', 'curri', 'huel'}</td><td>0.790989697209</td></tr>
+                <tr><td>2</td><td>654</td><td>3</td><td>702</td><td>{'femin', 'tyre', 'anxieti', 'dutert', 'bangladesh', 'mbsr', 'quantum', 'dementia', 'aquajog', 'transplant', 'social', 'plant', 'teacher', 'porn', 'pite', 'meerkat', 'warcraft', 'toy', 'therapist', 'wambach', 'pastri', 'cannabi', 'crowdfund', 'strava', 'parent', 'embryo', 'tran', 'harari', 'fundrais', 'disabl', 'fear', 'vertigo', 'cancer', 'crm'}</td><td>0.736449743757</td></tr>
+                <tr><td>3</td><td>477</td><td>2</td><td>817</td><td>{'tobacco', 'sharia', 'saudi', 'snowden', 'siem', 'pachauri', 'bha', 'glyphos', 'gchq', 'csiro', 'frack', 'abc', 'salmon', 'sunscreen'}</td><td>0.426099886821</td></tr>
+                <tr><td>4</td><td>336</td><td>5</td><td>459</td><td>{'kane', 'terim', 'monchi', 'martial', 'boro', 'dembélé', 'arteta', 'mourinho', 'mauresmo', 'mose', 'redknapp', 'coppel', 'preseason', 'kompani', 'gillespi', 'klopp', 'welbeck', 'pochettino', 'zidan', 'bayern', 'koeman', 'ayestarán', 'rodger', 'celtic', 'leagu', 'ajax', 'cont'}</td><td>0.812296723756</td></tr>
+                <tr><td>5</td><td>304</td><td>6</td><td>407</td><td>{'carter', 'hay', 'linek', 'touré', 'ranieri', 'hereford', 'widn', 'saracen', 'atlético', 'snodgrass', 'hourihan', 'suárez', 'kompani', 'kamara', 'pellegrini’', 'argentina', 'mcshane', 'xhaka', 'sturridg', 'djokov', 'leicest', 'petri', 'goromaru', 'pellegrini', 'pepe', 'wynalda'}</td><td>0.79033424368</td></tr>
+                <tr><td>6</td><td>304</td><td>4</td><td>505</td><td>{'preacher', 'aggi', 'wild', 'rat', 'mattia', 'sontag', 'dragon', 'homer', 'surf', 'delia', 'roobarb', 'houdini', 'versail', 'macfarlan', 'clara', 'marcella', 'mcavoy', 'plot', 'clooney', 'alicia', 'milo', 'cbeebi', 'wareheim'}</td><td>0.627845269255</td></tr>
+                <tr><td>7</td><td>296</td><td>7</td><td>399</td><td>{'pension', 'adblock', 'inflat', 'sse', 'hs2', 'hayn', 'legrain', 'bank', 'wage', 'ldc', 'asda', 'neet', 'gold', 'tfl', 'opec', 'popul', 'sainsbury’', 'abort', 'librari', 'britvic', 'sainsburi', 'poverti', 'burberri', 'nh', 'itn', 'lotteri'}</td><td>0.704178988965</td></tr>
+                <tr><td>8</td><td>286</td><td>11</td><td>291</td><td>{'women', 'antisemit', 'hamilton', 'kendal', 'khan', 'labour', 'dem', 'muslim', 'snp', 'allinkhan', 'msp', 'hosi', 'council', 'mf', 'scottish', 'mp', 'emoji', 'barnet', 'london', 'lib', 'zylinski', 'gael', 'pidgeon', 'pcc', 'livingston', 'burnham', 'reuben', 'toot', 'hilton', 'plaid', 'vote', 'hous', 'goldsmith', 'sturgeon', 'rendel', 'lbc', 'bristol', 'elect', 'devolut', 'ree', 'eagl'}</td><td>0.859650994173</td></tr>
+                <tr><td>9</td><td>226</td><td>2</td><td>817</td><td>{'ambul', 'freita', 'lupidi', 'maketa', 'mansoor', 'kincora'}</td><td>0.335117605527</td></tr>
+                <tr><td>10</td><td>212</td><td>12</td><td>245</td><td>{'pension', 'patholog', 'bernardi', 'palmer', 'natal', 'dental', 'mcgowan', 'peri', 'earn', 'super', 'shorten', 'aid', 'turnbul', 'bandt', 'art', 'seat', 'tobacco', 'feeney', 'sufi', 'penalti', 'marriag', 'nxt', 'indigen', 'plebiscit', 'owler', 'guthri', 'xenophon', 'tram', 'afp', 'joyc', 'budget', '67bn', 'tax', 'fierravantiwel', 'gear', 'jensen', 'rate', '80000', 'legal', 'ato', 'cowan', 'hospit', 'labor'}</td><td>0.903891386199</td></tr>
+                <tr><td>11</td><td>153</td><td>13</td><td>236</td><td>{'crossword', 'park', 'medellín’', 'loney', 'thorp', 'dada', 'fantasi', 'prometheu', 'hillsborough'}</td><td>0.25260359118</td></tr>
+                <tr><td>12</td><td>147</td><td>9</td><td>333</td><td>{'nao’', 'rage', 'wap', 'binney', 'shauf', 'nightingal', 'temperley', 'dvořák', 'andsn', 'florenc', 'music', 'dvořák’', 'mustonen', 'tiersen', 'improvis', 'sinatra', 'galá', 'frey'}</td><td>0.610172997269</td></tr>
+                <tr><td>13</td><td>136</td><td>8</td><td>337</td><td>{'clinton', 'spacey', 'kelli', 'priebu', 'pac', 'warren', 'obituari', 'trump', 'sander', 'latino', 'adelson', 'romney', 'cruz', 'rubio', 'thiel', 'mnuchin'}</td><td>0.621251193888</td></tr>
+                <tr><td>14</td><td>130</td><td>8</td><td>337</td><td>{'mic', 'bower', 'biden', 'perri', 'kendal', 'gun', 'sander', 'romesha', 'arpaio', 'starr', 'starl', 'furi', 'kelli', 'wap', 'clinton', 'péladeau', 'rouhani', 'sarandon', 'hodgkin', 'weinstein', 'mcafe', 'bundi', 'blair', 'dane', 'rubio'}</td><td>0.453875749096</td></tr>
+                <tr><td>15</td><td>126</td><td>16</td><td>135</td><td>{'coral', 'ssx', 'burk', 'trump', 'sierra', 'coal', 'food', 'insur', 'seafood', 'prrt', 'target', 'energi', 'shell', 'gm', 'storag', 'stoller', 'water', 'wind', 'renew', 'bleach', 'methan', 'divest', 'exxon', 'co2', '400ppm', 'solar', 'lithium', 'subsidi', 'ga', 'reef', 'auction', 'temperatur', 'climat', 'laird', 'winnow', 'g7', 'mackay', 'citi', 'gloucest', 'crop', 'batteri'}</td><td>0.828078671211</td></tr>
+                <tr><td>16</td><td>120</td><td>14</td><td>174</td><td>{'midwiv', 'libya', 'airdrop', 'assad', 'imf', 'women’', 'ngo', 'aid', 'hiv', 'muslim', 'cloth', 'dfid', 'donor', 'philanthropi', 'darayya', 'ricu', 'fairtrad', 'kabila', 'propaganda', 'humanitarian', 'syria', 'onangaanyanga', 'haram', 'orphanag', 'displac', 'turkey', 'remitt', 'eu', 'iran', 'reproduct', 'boko', 'fairbairn', 'avpn', 'diaspora', 'rohingya', 'libyan', 'educ'}</td><td>0.712807035411</td></tr>
+                <tr><td>17</td><td>118</td><td>10</td><td>297</td><td>{'irish', 'selfemploy', 'student', 'ireland', 'ip', 'gillingham', 'trade', 'fitch', 'nato', 'schengen', 'hargreav', 'immigr', 'migrat', 'outer', 'churchil', 'truss', 'ehic', 'aboveoop', 'turkey', 'johnson', 'ttip', 'eurovis', 'eu', 'wto', 'nonuk'}</td><td>0.5982721607</td></tr>
+                <tr><td>18</td><td>113</td><td>15</td><td>162</td><td>{'inspect', 'chariti', 'stillbirth', 'garden', 'lidbett', 'aidhour', 'foster', 'custodi', 'islet', 'health', 'mental', 'elearn', 'social', 'care', 'discharg', 'stockport', 'poison', 'fistula', 'suicid', 'diabet', 'famili', 'bubb', 'budget', 'pcc', 'enterpris', 'ae', 'adopt', 'carer', 'nh', 'bed', 'cancer', 'data'}</td><td>0.702145111084</td></tr>
+                <tr><td>19</td><td>96</td><td>17</td><td>110</td><td>{'media', 'puttnam', 'scotland', 'linek', 'programm', 'nevillerolf', 'respublica', 'food', 'kosminski', 'divers', 'fairhead', 'privatis', 'bame', 'radio', 'bbc', 'news', 'studio', 'channel', 'linsey', 'cha', 'advertis', '4', 'onlin', 'bbc2', 'factual', 'award', 'whittingdal', 'bbc1', 'birmingham', 'c4', 'board', 'disabl', 'recip', 'patten', 'bafta'}</td><td>0.91473625939</td></tr>
+                <tr><td>20</td><td>95</td><td>13</td><td>236</td><td>{'ether', 'book', 'itch', 'hazel', 'rattl', 'trina', 'alfi', 'erdrich', 'd’evil', 'haddon', 'ricki', 'frankenstein', 'garvi', 'witch', 'langrish', 'sacha', 'audrey', 'laros'}</td><td>0.621105170218</td></tr>
+                <tr><td>21</td><td>85</td><td>2</td><td>817</td><td>{'uae', 'mohammadi', 'etherton', 'ratner', 'prison'}</td><td>0.307372159082</td></tr>
+                <tr><td>22</td><td>84</td><td>2</td><td>817</td><td>set()</td><td>0.255754999115</td></tr>
+                <tr><td>23</td><td>83</td><td>4</td><td>505</td><td>{'vikand', '•', 'sherlock', 'kwouk', 'winfrey', 'hathaway', 'ninagawa', 'lumièr', 'troll', 'halloween', '1986', 'astruc'}</td><td>0.312604509543</td></tr>
+                <tr><td>24</td><td>81</td><td>19</td><td>94</td><td>{'pension', 'tata', 'ppf', 'austin', 'zwillenberg', 'monsanto', 'jd', 'reed', 'robertson', 'bh', 'cma', 'edmond', 'ukar', 'henderson', 'store', 'sharehold', 'ace', 'olivia', 'sabl', 'triniti', 'electra', 'steel', 'bayer', 'cryan', 'putopt', 'barclay', 'sainsbury’', 'axa', 'chappel', 'sport', 'retail', 'scheme', 'ici', 'mortgag'}</td><td>0.767835816659</td></tr>
+                <tr><td>25</td><td>81</td><td>18</td><td>102</td><td>{'church', 'khakhar’', 'kahn’', 'teeth', 'museum', 'statu', 'lassnig', 'dubuffet', 'libbert', 'artist', 'art', 'circl', 'paint', 'courtauld', 'flemish', 'ama', 'hockney', 'tate', 'pavilion', 'hatoum', 'hepworth', 'sherman', 'khakhar', 'spider', 'marisol', 'gonzaleztorr', 'cave', 'rejland', 'herzog', '“untitled”', 'missoni', 'ackermann', 'bacon', 'houghton', 'caterpillar', 'dunhuang'}</td><td>0.836124591847</td></tr>
+                <tr><td>26</td><td>77</td><td>2</td><td>817</td><td>{'leopard', 'lamprey', 'wolverin', 'crocodil', 'carib', 'acidif', 'cat', 'wolv', 'polar', 'rhino', 'whale', 'frack', 'bison', 'salmon'}</td><td>0.287062263907</td></tr>
+                <tr><td>27</td><td>75</td><td>22</td><td>73</td><td>{'brick', 'museum', 'ccaccaccollo', 'superblock', 'moggridg', 'johan', 'dubai’', 'shenzhen', 'ive', 'keyn', 'cyberc', 'flood', 'oma', 'jacob', 'milton', 'copenhagen', 'hadlow', 'stonecycl', 'coloni', 'chennai', 'westerham', 'belgrad', 'amman', 'soul', 'mckissick', 'walton', 'alto', 'sym', 'tower', 'palo', 'norwood', 'gk', 'nickel', 'citi'}</td><td>0.729796368671</td></tr>
+                <tr><td>28</td><td>71</td><td>6</td><td>407</td><td>{'cincinnati', 'harper', 'season', 'benítez', 'blackpool', 'vieira', 'martínez', 'poyet', 'g', 'strasburg'}</td><td>0.329428863534</td></tr>
+                <tr><td>29</td><td>70</td><td>20</td><td>84</td><td>{'wicket', 'amir', 'ball', 'bairstow', 'selector', 'sri', 'hale', 'jayawarden', 'jaywarden', 'topley', 'av', 'herath', 'ton', 'shanaka', 'mathew', 'woak', 'finn', 'gubbin', 'test', 'vinc', 'dexter', 'mullaney', 'saqlain', 'lanka', 'bowler', 'broad', 'inning', 'curran', 'cricket', 'anderson', 'sangakkara', 'cook', 'mclaren', 'panesar', 'livingston', 'ballanc', 'bat', 'moeen', 'compton'}</td><td>0.899829915901</td></tr>
+                <tr><td>30</td><td>69</td><td>23</td><td>73</td><td>{'breeders’', 'nemoralia', 'allweath', 'snow', 'moor', 'verdon', 'hors', 'derbi', 'frankel', 'turf', 'lucky15', 'epsom', 'galileo', 'burrow', 'nyquist', 'skiffl', 'chester', 'ascot', 'handicap', 'preak', 'altidor', 'oak', 'huntsman', 'stout', 'gosden', 'dunlop', 'o’brien', 'guinea', 'copa', 'dar', 'cc', 'bolger', 'haydock', 'moonlight', 'midterm', 'race', 'klinsmann', 'fc', 'kentucki', 'noseband', 'mi', 'cunco', 'dougla'}</td><td>0.901766294486</td></tr>
               </tbody>
             </table>
           </div>
@@ -435,121 +441,77 @@
 
         <div class="row">
           <div class="col-xs-12">
-            <h3>Matching top 50 network labels with LCM labels.</h3>
+            <h3>Matching top 30 Modularity labels to LCM labels.</h3>
             <table class="table">
               <thead>
                 <tr>
                   <td>Modularity Label</td>
                   <td>Modularity Size</td>
-                  <td>Modularity Keywords</td>
                   <td>LCM Label</td>
                   <td>LCM Size</td>
-                  <td>LCM Keywords</td>
-                  <td>Cosine Similarity</td>
+                  <td>Similar Keywords</td>
+                  <td>Cosine Similarity of Documents</td>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>6</td><td>612</td><td>'g', 'season', 'mourinho', 'warnock', 'arteta', 'ranieri', 'rodger', 'pochettino', 'thai', 'morri'</td><td>6</td><td>857</td><td>'g', 'season', 'kooiman', 'temperley', 'pite', 'mourinho', 'knox', 'itoj', 'curri', 'warnock'</td><td>0.785680807447</td></tr>
-                <tr><td>170</td><td>494</td><td>'fundrais', 'dr', 'fundrais', 'therapist', 'oxygen', 'discharg', 'anxieti', 'anxieti', 'diabet', 'suicid'</td><td>58</td><td>680</td><td>'mdb', 'fundrais', 'apprenticeship', 'saudi', 'prison', 'prison', 'fundrais', 'snowden', 'prison', 'disabl'</td><td>0.243277072949</td></tr>
-                <tr><td>89</td><td>487</td><td>'antonia', 'cv', 'disabl', 'talktalk', '7eleven', 'ucu', 'binoch', 'ldc', 'disabl', 'abort'</td><td>132</td><td>58</td><td>'cannabi', 'binoch', 'prison', 'refn', 'farrow', 'drug', 'sarandon', 'prison', 'drug', 'cannabi'</td><td>0.166601748078</td></tr>
-                <tr><td>86</td><td>449</td><td>'hs2', 'siem', 'tobacco', 'tobacco', 'tax', 'hs2', 'cocoa', 'depp', 'wage', 'tax'</td><td>99</td><td>263</td><td>'homeless', 'palmer', 'sharia', 'refuge', 'tax', 'refuge', 'guthri', 'wage', 'agedcar', 'seat'</td><td>0.680949354708</td></tr>
-                <tr><td>218</td><td>442</td><td>'churchil', 'ttip', 'ttip', 'sharia', 'export', 'ceta', 'enrol', 'rm', 'ehic', 'patten'</td><td>76</td><td>273</td><td>'eavi', 'blair', 'rotherham', 'ehic', 'patten', 'displac', 'refuge', 'bower', 'ttip', 'ttip'</td><td>0.6621179745</td></tr>
-                <tr><td>11</td><td>396</td><td>'homeless', 'mayweath', 'leasehold', 'muslim', 'council', 'homeless', 'parish', 'tfl', 'ricu', 'mosqu'</td><td>124</td><td>168</td><td>'ree', 'pcc', 'antisemit', 'plaid', 'plaid', 'council', 'scottish', 'labour', 'livingston', 'devolut'</td><td>0.616445789389</td></tr>
-                <tr><td>207</td><td>376</td><td>'soundcloud', 'wed', 'pite', 'lassnig', 'art', 'dane', 'festiv', 'eavi', 'franzen', 'ipod'</td><td>121</td><td>202</td><td>'galá', 'spotifi', 'mustonen', 'punk', 'spotifi', 'skepta', 'prometheu', 'donen', 'andsn', 'ginsberg'</td><td>0.268511018887</td></tr>
-                <tr><td>96</td><td>318</td><td>'mdb', 'pollut', 'coral', 'seafood', 'reef', 'batteri', 'belgrad', 'csiro', 'acidif', 'plastic'</td><td>90</td><td>232</td><td>'hs2', 'reef', 'contrail', 'batteri', 'acidif', 'hyperloop', 'reef', 'flint', 'corbi', 'energi'</td><td>0.449161246325</td></tr>
-                <tr><td>81</td><td>313</td><td>'tuesday', 'friday', 'friday', 'friday', 'wednesday', 'wednesday', 'wednesday', 'wednesday', 'tuesday', 'tuesday'</td><td>70</td><td>125</td><td>'tyre', 'crm', 'cv', 'data', 'adblock', 'hyperloop', 'quantum', 'tampon', 'export', 'morag'</td><td>0.222446461233</td></tr>
-                <tr><td>97</td><td>298</td><td>'mnuchin', 'perez', 'thiel', 'obituari', 'gun', 'gun', 'rubio', 'sarandon', 'pac', 'meme'</td><td>108</td><td>255</td><td>'obituari', 'gun', 'rubio', 'sarandon', 'pac', 'ulay', 'meme', 'rubio', 'gold', 'rubio'</td><td>0.823469721297</td></tr>
-                <tr><td>216</td><td>275</td><td>'librari', 'dragon', 'bee', 'tip', 'fawcettflatsfriday', 'cat', 'bangladesh', 'itch', 'heel', 'plot'</td><td>17</td><td>23</td><td>'miso', 'caramelis', 'raspberri', '‘feast’', '‘bloom’', '‘acrobatic’', '‘bold’', 'guardianwit', 'review', 'guardianwit'</td><td>0.289199522192</td></tr>
-                <tr><td>49</td><td>257</td><td>'saudi', 'journalist', 'refuge', 'humanitarian', 'refuge', 'jacket', 'refuge', 'saudi', 'humanitarian', 'airdrop'</td><td>68</td><td>56</td><td>'steel', 'airdrop', 'falluja', 'tamkeen', 'tata', 'tata', 'isi', 'steel', 'steel', 'darayya'</td><td>0.250069473393</td></tr>
-                <tr><td>172</td><td>253</td><td>'tattoo', 'ridsdal', 'valentino', 'masturb', 'bundi', 'dog', 'porn', 'sulli', 'kincora', 'lyst'</td><td>13</td><td>458</td><td>'ridsdal', 'curfew', 'bundi', 'uae', 'ghomeshi', 'wolverin', 'ratner', 'freita', 'bahá’í', 'lupidi'</td><td>0.355461337537</td></tr>
-                <tr><td>178</td><td>245</td><td>'password', 'snowden', 'abc', 'curri', 'raptor', 'warcraft', 'embarrass', 'guthri', 'spur', 'ling'</td><td>120</td><td>21</td><td>'bt', 'window', 'window', 'window', 'tablet', 'v8', 'router', 'app', 'upgrad', 'tablet'</td><td>0.153355725749</td></tr>
-                <tr><td>191</td><td>200</td><td>'cannabi', 'prison', 'prison', 'pelé', 'antibiot', 'prison', 'prison', 'prison', 'prison', 'ratner'</td><td>132</td><td>58</td><td>'cannabi', 'binoch', 'prison', 'refn', 'farrow', 'drug', 'sarandon', 'prison', 'drug', 'cannabi'</td><td>0.213549638904</td></tr>
-                <tr><td>83</td><td>178</td><td>'parent', 'tran', 'nolan', 'hyman', 'unrwa', 'teacher', 'duckworth', 'guardianteach', 'breakfast', 'school'</td><td>34</td><td>9</td><td>'nayfack', 'transgend', 'transgend', 'gopstein', 'transgend', 'lehava', 'student', 'transgend', 'carolina', 'transgend'</td><td>0.199875117066</td></tr>
-                <tr><td>36</td><td>160</td><td>'bbc', 'bbc', 'bbc', 'bbc', 'recip', 'bbc', 'bbc', 'bbc', 'grundi', 'birmingham'</td><td>128</td><td>121</td><td>'hertz', 'bbc', 'bbc', 'hertz', 'bbc', 'bbc', 'bbc', 'bbc', 'bbc', 'birmingham'</td><td>0.754634441631</td></tr>
-                <tr><td>164</td><td>141</td><td>'pension', 'steel', 'pension', 'glyphos', 'bh', 'tata', 'bh', 'tata', 'asda', 'bh'</td><td>79</td><td>383</td><td>'invoic', 'bauer', 'soundcloud', 'barclay', 'mortgag', 'tobacco', 'solar', 'poverti', 'mortgag', 'gannett'</td><td>0.421713139163</td></tr>
-                <tr><td>186</td><td>135</td><td>'drone', 'mansoor', 'iceland', 'interpret', 'uber', 'hekmatyar', 'ev', 'rosberg', 'drone', 'uber'</td><td>72</td><td>70</td><td>'wednesday', 'wednesday', 'wednesday', 'wednesday', 'djokov', 'rosberg', 'beden', 'mladenov', 'murray', 'mercuri'</td><td>0.226311579944</td></tr>
-                <tr><td>152</td><td>134</td><td>'itoj', 'ebner', 'hayn', 'hayn', 'corbisiero', '•', 'widn', 'haggerti', 'mcshane', '•'</td><td>6</td><td>857</td><td>'g', 'season', 'kooiman', 'temperley', 'pite', 'mourinho', 'knox', 'itoj', 'curri', 'warnock'</td><td>0.327551934464</td></tr>
-                <tr><td>215</td><td>132</td><td>'hertz', 'bauer', 'hertz', 'eurovis', 'tudor', 'scilli', 'cunk', 'weinstein', 'deen', 'peston'</td><td>21</td><td>10</td><td>'leblanc', 'cleese’', 'evan', 'evan', 'evan', 'pollardmansergh', 'evan', 'clarkson', 'clees', 'leblanc'</td><td>0.247716847153</td></tr>
-                <tr><td>194</td><td>114</td><td>'schipper', 'diamond', 'hyperloop', 'knox', 'hyperloop', 'mcilroy', 'gasol', 'spieth', 'clara', 'pendleton'</td><td>78</td><td>23</td><td>'schipper', 'mcilroy', 'gasol', 'pendleton', 'peati', 'johnsonthompson', 'olymp', 'sayer', 'shields’', 'adlington'</td><td>0.429641611775</td></tr>
-                <tr><td>125</td><td>110</td><td>'mathew', 'gayl', 'gayl', 'compton', 'stoke', 'panesar', 'cemeteri', 'shanaka', 'cemeteri', 'bairstow'</td><td>16</td><td>90</td><td>'mathew', 'gayl', 'compton', 'stoke', 'shanaka', 'bairstow', 'panesar', 'wicket', 'wicket', 'cook'</td><td>0.884433277428</td></tr>
-                <tr><td>76</td><td>104</td><td>'vegan', 'vegan', 'vegan', 'turmer', 'embryo', 'miso', 'egg', 'skin', 'chees', 'pastri'</td><td>56</td><td>113</td><td>'huel', 'falafel', 'garden', 'turmer', 'garden', 'garden', 'miso', 'recip', 'egg', 'food'</td><td>0.516573514663</td></tr>
-                <tr><td>92</td><td>102</td><td>'barrow', 'langley', 'award', 'morag', 'noorjji', 'moya', 'salmon', 'angharad', 'koalapak', 'roasteri'</td><td>58</td><td>680</td><td>'mdb', 'fundrais', 'apprenticeship', 'saudi', 'prison', 'prison', 'fundrais', 'snowden', 'prison', 'disabl'</td><td>0.250604804755</td></tr>
-                <tr><td>150</td><td>98</td><td>'fallon', 'nyquist', 'allweath', 'gosden', 'payn', 'derbi', 'derbi', 'frankel', 'payn', 'ride'</td><td>31</td><td>65</td><td>'noseband', 'fallon', 'nyquist', 'race', 'allweath', 'gosden', 'derbi', 'derbi', 'frankel', 'ride'</td><td>0.776822817101</td></tr>
-                <tr><td>160</td><td>96</td><td>'garden', 'garden', 'garden', 'ranger', 'eleph', 'ivori', 'indigen', 'squirrel', 'plant', 'rhino'</td><td>45</td><td>2</td><td>'ebay', 'speci', 'ebay', 'invas', 'speci', 'plant', 'plant', 'salvinia', 'amazon', 'seller'</td><td>0.144337567297</td></tr>
-                <tr><td>115</td><td>65</td><td>'tsa', 'spider', 'hedg', 'mh370', 'flight', 'turtl', 'turtl', 'spider', 'chocolat', 'menzio'</td><td>35</td><td>30</td><td>'mh370', 'guam', 'menzio', 'rescreen', 'egyptian', 'passeng', 'helicopt', 'passeng', 'egyptian', 'airport'</td><td>0.634075139121</td></tr>
-                <tr><td>117</td><td>55</td><td>'apprenticeship', 'church', 'grotto', 'bt', 'archdioces', 'hitchen', 'bt', 'faith', 'priest', 'bond'</td><td>82</td><td>3</td><td>'bianchi', 'church', 'pope', 'mcelwe', 'priest', 'deacon', 'deacon', 'deaco', 'church', 'ordain'</td><td>0.233549683248</td></tr>
-                <tr><td>118</td><td>53</td><td>'tenni', 'djokov', 'beden', 'mauresmo', 'mladenov', 'murray', 'murray', 'murray', 'djokov', 'murray'</td><td>72</td><td>70</td><td>'wednesday', 'wednesday', 'wednesday', 'wednesday', 'djokov', 'rosberg', 'beden', 'mladenov', 'murray', 'mercuri'</td><td>0.656709103303</td></tr>
-                <tr><td>168</td><td>50</td><td>'wolverin', 'xmen', 'comic', 'helberg', 'florenc', 'preacher', 'superhero', 'dc', 'batman', 'pullman'</td><td>11</td><td>4</td><td>'site', 'xmen', 'site', 'preview', 'site', 'site', 'apocalyps', 'aveng', 'florenc', 'preview'</td><td>0.282842712475</td></tr>
-                <tr><td>211</td><td>43</td><td>'dada', 'poetri', 'poetri', 'greec', 'poem', 'plath’', 'debt', 'debt', 'biennal', 'duffi'</td><td>131</td><td>12</td><td>'greec', 'debt', 'debt', 'tax', 'pitsiorla', 'bailout', 'greec', 'debt', 'creditor', 'greece’'</td><td>0.484247998479</td></tr>
-                <tr><td>161</td><td>28</td><td>'debentur', 'ticket', 'ticket', 'crossword', 'resel', 'crossword', 'fashion', 'cryptic', 'crossword', 'ticket'</td><td>133</td><td>6</td><td>'point', 'fashion', '10am11am', 'pure', 'knowadd', 'alwaysadd', 'sometimesadd', 'neveradd', 'pure', 'fashion'</td><td>0.308606699924</td></tr>
-                <tr><td>112</td><td>21</td><td>'hutterit', 'fpö', 'hofer', 'bellen', 'hofer', 'hofer', 'bellen', 'der', 'fpö', 'der'</td><td>30</td><td>22</td><td>'houghton', 'fpö', 'hofer', 'bellen', 'hofer', 'bellen', 'der', 'fpö', 'der', 'der'</td><td>0.930484210398</td></tr>
-                <tr><td>29</td><td>20</td><td>'rawabi', 'netanyahu', 'palestinian', 'palestinian', 'lieberman', 'hinn', 'hama', 'palestinian', 'gaza', 'isra'</td><td>136</td><td>567</td><td>'sock', 'parent', 'churchil', 'harari', 'doomerang', 'tran', 'ttip', 'ttip', 'abort', 'dutert'</td><td>0.0751248226425</td></tr>
-                <tr><td>51</td><td>20</td><td>'aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'dann', 'cabay', 'aug'</td><td>84</td><td>19</td><td>'aug', 'aug', 'aug', 'knee', 'knee', 'tottenham', 'r3', 'aug', 'knee', 'knee'</td><td>0.974679434481</td></tr>
-                <tr><td>114</td><td>16</td><td>'bitcoin', 'bitcoin', 'bitcoin', 'bitcoin', 'kabila', 'wright', 'spacey', 'wright', 'bitcoin', 'wright'</td><td>1</td><td>7</td><td>'bitcoin', 'bitcoin', 'wright', 'wright', 'bitcoin', 'bitcoin', 'bitcoin', 'mascot', 'nakamoto', 'bitcoin'</td><td>0.566946709514</td></tr>
-                <tr><td>144</td><td>12</td><td>'throne', 'jon', '“r', 'tyrel', 'j”', 'sansa', 'dani', 'jaim', 'hodor', 'lyanna'</td><td>87</td><td>805</td><td>'gingham', 'necklac', 'dada', 'dragon', 'stubbl', 'homer', 'trevelyan', 'kenzo', 'frodo', 'wed'</td><td>0.0813956927556</td></tr>
-                <tr><td>80</td><td>11</td><td>'chibok', 'chibok', 'haram', 'giwa', 'boko', 'nkeki', 'boko', 'haram', 'chibok', 'boko'</td><td>10</td><td>11</td><td>'badreddin', 'chibok', 'badreddin', 'chibok', 'nkeki', 'badreddin', 'hezbollah', 'chibok', 'hezbollah', 'boko'</td><td>0.636363636364</td></tr>
-                <tr><td>44</td><td>8</td><td>'ufc', 'mayweath', 'mcgregor', 'ufc', 'editor', 'mcgregor', 'mullin', 'ufc', 'ufc', 'editor'</td><td>81</td><td>76</td><td>'antibiot', 'oxygen', 'mayweath', 'fistula', 'baka', 'mbsr', 'diabet', 'vertigo', 'transplant', 'mayweath'</td><td>0.0405553552827</td></tr>
-                <tr><td>57</td><td>8</td><td>'3x3', '3x3', '3x3', '3x3', '83', '83', '83', '83', 'grid', 'grid'</td><td>0</td><td>4</td><td>'3x3', '3x3', '3x3', '3x3', 'grid', 'grid', 'grid', 'grid', 'puzzl', 'puzzl'</td><td>0.707106781187</td></tr>
-                <tr><td>141</td><td>8</td><td>'climb', 'climber', 'climber', 'coxsey', 'climber', 'everest', 'everest', 'everest', 'sherpa', 'climb'</td><td>9</td><td>4</td><td>'climber', 'climber', 'climber', 'everest', 'everest', 'sherpa', 'sherpa', 'everest', 'arnold', 'summit'</td><td>0.707106781187</td></tr>
-                <tr><td>33</td><td>7</td><td>'alicia', 'cum', 'celia', 'alicia', 'travi', 'madison', 'nick', 'alicia', 'zombi', 'travi'</td><td>87</td><td>805</td><td>'gingham', 'necklac', 'dada', 'dragon', 'stubbl', 'homer', 'trevelyan', 'kenzo', 'frodo', 'wed'</td><td>0.0666074863029</td></tr>
-                <tr><td>142</td><td>7</td><td>'bha', 'bha', 'bha', 'bha', 'lohn', 'bha', 'lohn', 'bha', 'bha', 'disciplinari'</td><td>12</td><td>18</td><td>'bha', 'bha', 'bha', 'hekmatyar', 'bha', 'lohn', 'mansoor', 'mansoor', 'firoza', 'bha'</td><td>0.623609564462</td></tr>
-                <tr><td>155</td><td>7</td><td>'harari', 'robot', 'robot', 'zora', 'robot', 'capit', 'deblieck', 'em', 'ubi', 'robot'</td><td>120</td><td>21</td><td>'bt', 'window', 'window', 'window', 'tablet', 'v8', 'router', 'app', 'upgrad', 'tablet'</td><td>0.0824786098842</td></tr>
-                <tr><td>137</td><td>6</td><td>'gustav', 'mattia', 'gustav', 'tremain', 'mattia', 'gustav', 'magnu', 'sofia', 'anton', 'verita'</td><td>87</td><td>805</td><td>'gingham', 'necklac', 'dada', 'dragon', 'stubbl', 'homer', 'trevelyan', 'kenzo', 'frodo', 'wed'</td><td>0.0719443078836</td></tr>
-                <tr><td>176</td><td>6</td><td>'dress', 'yellow', 'yellow', 'dress', 'azaelea', 'carpet', 'ball', 'umpir', 'ref', 'lawri'</td><td>6</td><td>857</td><td>'g', 'season', 'kooiman', 'temperley', 'pite', 'mourinho', 'knox', 'itoj', 'curri', 'warnock'</td><td>0.0557819837946</td></tr>
-                <tr><td>55</td><td>5</td><td>'anag', 'anag', 'anag', 'anag', 'def', 'def', 'anag', 'd', 'rev', 'meddlesom'</td><td>117</td><td>7</td><td>'anag', 'religion', 'anag', 'anag', 'anag', 'def', 'def', 'anag', 'd', 'christian'</td><td>0.845154254729</td></tr>
-                <tr><td>68</td><td>5</td><td>'princ', 'windsor', 'harri', 'hors', 'delud', 'kate', 'tesco', 'pippa', 'enfield', 'fool”'</td><td>104</td><td>76</td><td>'gchq', 'lyst', 'app', 'instagram', 'mulkentin', 'møller', 'browser', 'tech', 'thiel', 'kadyrov'</td><td>0.0512989176043</td></tr>
-                <tr><td>223</td><td>5</td><td>'ilga', 'lgbti', 'azerbaijan', 'lgbti', 'convict', 'intersex', 'lgbti', 'convict', 'expung', 'homosexu'</td><td>13</td><td>458</td><td>'ridsdal', 'curfew', 'bundi', 'uae', 'ghomeshi', 'wolverin', 'ratner', 'freita', 'bahá’í', 'lupidi'</td><td>0.062690756929</td></tr>
+                <tr><td>1</td><td>1041</td><td>1</td><td>823</td><td>{'theatr', 'porta', 'cunk', 'festiv', 'duckworth', 'soundcloud', 'antonia', 'wed', 'eavi', 'autism', 'weir', 'hellboy', 'huppert', 'essay', 'refn'}</td><td>0.323032267536</td></tr>
+                <tr><td>2</td><td>696</td><td>10</td><td>297</td><td>{'irish', 'ehic', 'vote', 'ttip', 'eu', 'european', 'poll', 'ireland', 'referendum', 'churchil', 'patten', 'enrol'}</td><td>0.585057824821</td></tr>
+                <tr><td>3</td><td>647</td><td>5</td><td>459</td><td>{'kane', 'terim', 'monchi', 'martial', 'boro', 'dembélé', 'arteta', 'mourinho', 'mose', 'coppel', 'preseason', 'zlatan', 'kompani', 'klopp', 'welbeck', 'pochettino', 'coleman', 'zidan', 'warnock', 'bayern', 'koeman', 'xia', 'rodger', 'bolasi', 'celtic', 'leagu', 'ajax', 'bale'}</td><td>0.601887550749</td></tr>
+                <tr><td>4</td><td>529</td><td>12</td><td>245</td><td>{'tobacco', 'seat', 'guthri', 'sufi', 'patholog', 'xenophon', 'palmer', 'peri', 'indigen', 'dodson', 'bishop', 'ato', 'tax', 'shorten', 'plebiscit', 'wyatt', 'abc'}</td><td>0.644432013391</td></tr>
+                <tr><td>5</td><td>421</td><td>16</td><td>135</td><td>{'ga', 'seafood', 'renew', 'reef', 'coral', 'emiss', 'plastic', 'divest', 'batteri', '400ppm', 'energi', 'solar', 'exxon', 'klein', 'lithium', 'subsidi', 'frisbi'}</td><td>0.436239922107</td></tr>
+                <tr><td>6</td><td>370</td><td>8</td><td>337</td><td>{'cruz', 'biden', 'priebu', 'kendal', 'obituari', 'gun', 'sander', 'latino', 'trump', 'starr', 'ivanka', 'rubio', 'warren', 'ufo', 'kelli', 'clinton', 'coloradocar', 'sarandon', 'thiel', 'mcafe', 'ong', 'adelson', 'romney', 'pac', 'nra', 'mnuchin'}</td><td>0.69948940511</td></tr>
+                <tr><td>7</td><td>352</td><td>24</td><td>53</td><td>{'award', 'roasteri', 'morag', 'moya', 'koalapak', 'dreamr', 'noorjji', 'shoe', 'angharad'}</td><td>0.388031160886</td></tr>
+                <tr><td>8</td><td>341</td><td>15</td><td>162</td><td>{'chariti', 'lidbett', 'pharmacist', 'surgeri', 'hiv', 'mental', 'elearn', 'social', 'care', 'truste', 'discharg', 'stockport', 'poison', 'compass', 'fistula', 'suicid', 'diabet', 'enterpris', 'patient', 'gp', 'carer', 'fundrais', 'disabl', 'nh', 'bed', 'cancer', 'health'}</td><td>0.604162336175</td></tr>
+                <tr><td>9</td><td>302</td><td>7</td><td>399</td><td>{'pension', 'hous', 'britvic', 'sainsburi', 'asda', 'leasehold', 'hs2', 'rent', 'homeless', 'mitsubishi', 'estat', 'sainsbury’', 'mortgag'}</td><td>0.423474647735</td></tr>
+                <tr><td>10</td><td>297</td><td>3</td><td>702</td><td>{'teacher', 'engin', 'parent', 'tran', 'cv'}</td><td>0.229954820662</td></tr>
+                <tr><td>11</td><td>295</td><td>13</td><td>236</td><td>{'wodehous', 'book', 'itch', 'hazel', 'loney', 'trina', 'alfi', 'd’evil', 'hermion', 'ricki', 'pellinor', 'garvi', 'ivi', 'audrey'}</td><td>0.386574463907</td></tr>
+                <tr><td>12</td><td>286</td><td>14</td><td>174</td><td>{'aleppo', 'libya', 'turkey', 'cambodia', 'remitt', 'humanitarian', 'philanthropi', 'syria', 'airdrop', 'reproduct', 'darayya', 'syrian', 'rohingya', 'refuge', 'aid', 'displac', 'traffick', 'muslim', 'ricu'}</td><td>0.497582775303</td></tr>
+                <tr><td>13</td><td>258</td><td>2</td><td>817</td><td>{'kincora'}</td><td>0.350675152708</td></tr>
+                <tr><td>14</td><td>257</td><td>17</td><td>110</td><td>{'gambaccini', 'whittingdal', 'bbc', 'puttnam', 'birmingham', 'scotland', 'bame', 'radio', 'channel', 'linsey', 'attenborough', 'remit', 'cohen', 'recip', 'patten', 'respublica'}</td><td>0.624491303417</td></tr>
+                <tr><td>15</td><td>247</td><td>53</td><td>7</td><td>{'mujica', 'maduro'}</td><td>0.168345124585</td></tr>
+                <tr><td>16</td><td>212</td><td>2</td><td>817</td><td>{'snowden', 'mohammadi', 'ávila', 'prison', 'antibiot'}</td><td>0.245087528886</td></tr>
+                <tr><td>17</td><td>170</td><td>40</td><td>16</td><td>{'cunha', 'rousseff'}</td><td>0.306785995539</td></tr>
+                <tr><td>18</td><td>140</td><td>69</td><td>4</td><td>{'garden', 'plant', 'flower'}</td><td>0.169030850946</td></tr>
+                <tr><td>19</td><td>129</td><td>6</td><td>407</td><td>{'carter', 'petri', 'goromaru', 'widn', 'corbisiero', 'ebner', 'saracen', 'hayn', 'mcshane'}</td><td>0.331681716674</td></tr>
+                <tr><td>20</td><td>118</td><td>20</td><td>84</td><td>{'wicket', 'amir', 'ball', 'bairstow', 'sri', 'gayl', 'hale', 'rolandjon', 'jaywarden', 'av', 'herath', 'shanaka', 'mathew', 'woak', 'finn', 'gubbin', 'test', 'vinc', 'saqlain', 'bowler', '50over', 'edward', 'cricket', 'petersen', 'anderson', 'sangakkara', 'cook', 'panesar', 'livingston', 'bat', 'moeen', 'compton'}</td><td>0.843720573875</td></tr>
+                <tr><td>21</td><td>108</td><td>18</td><td>102</td><td>{'khakhar’', 'kahn’', 'museum', 'naukrati', 'lassnig', 'artist', 'art', 'paint', 'courtauld', 'flemish', 'koon', 'hockney', 'tate', 'hatoum', 'sherman', 'khakhar', 'marisol', 'gonzaleztorr', 'rejland', 'herzog', '“untitled”', 'ackermann', 'bacon'}</td><td>0.495440357078</td></tr>
+                <tr><td>22</td><td>100</td><td>34</td><td>26</td><td>{'hong', 'china', 'ling', 'nuclear', 'chines', 'missil', 'kong', 'taiwan', 'xi', 'mao', 'tsai', 'd’orsi', 'revolut', 'teng'}</td><td>0.431455497304</td></tr>
+                <tr><td>23</td><td>99</td><td>23</td><td>73</td><td>{'breeders’', 'nemoralia', 'allweath', 'snow', 'moor', 'verdon', 'hors', 'derbi', 'frankel', 'turf', 'lucky15', 'epsom', 'galileo', 'burrow', 'nyquist', 'skiffl', 'chester', 'fallon', 'ride', 'jockey', 'ascot', 'handicap', 'preak', 'oak', 'huntsman', 'stout', 'newcastl', 'gosden', 'dunlop', 'o’brien', 'guinea', 'dar', 'cc', 'bolger', 'haydock', 'moonlight', 'midterm', 'race', 'kentucki', 'mi', 'cunco', 'dougla'}</td><td>0.741073906903</td></tr>
+                <tr><td>24</td><td>93</td><td>29</td><td>27</td><td>{'westbrook', 'spur', 'allnba', 'shark', 'warrior', 'thunder', 'game', 'nhl', 'cavali', 'curri', 'oneanddon', 'raptor'}</td><td>0.458991327402</td></tr>
+                <tr><td>25</td><td>85</td><td>26</td><td>33</td><td>{'faymann', 'austria', 'fpo', 'hofer', 'wel', 'der', 'parti', 'bellen', 'fpö'}</td><td>0.30210196482</td></tr>
+                <tr><td>26</td><td>80</td><td>21</td><td>75</td><td>{'doughnut', 'egg', 'chees', 'fig', 'asparagu', 'saoirs', 'sandwich', 'dough', 'dandelion', 'ajo', 'toast', 'delia', 'fritter', 'almond', 'pasta', 'mozzarella', 'waffl', 'blanco', 'chicken', 'mash', 'bread', 'aloo', 'mango', 'cook', 'italian', 'macaroni', 'tomato', 'grill', 'whisk', 'vegan', 'miso', 'chia', 'cake'}</td><td>0.632587279881</td></tr>
+                <tr><td>27</td><td>75</td><td>30</td><td>27</td><td>{'eagl', 'passeng', 'airport', 'egyptian', 'plane', 'egypt', 'rescreen', 'cairo', 'search', 'flight', 'egyptair'}</td><td>0.488888888889</td></tr>
+                <tr><td>28</td><td>62</td><td>32</td><td>26</td><td>{'heineken', 'merced', 'f1', 'bull', 'driver', 'nico', 'monaco', 'sponsorship', 'rosberg', 'hamilton', 'lap', 'race', 'red', 'verstappen', 'rosberg’', 'ricciardo', 'kvyat'}</td><td>0.597762577664</td></tr>
+                <tr><td>29</td><td>43</td><td>68</td><td>4</td><td>{'tatar', 'jamala', 'contest', 'song', 'crimean', 'eurovis', 'russian', 'russia', 'ukrain', 'annex', 'australia', 'ukrainian', '14', 'eurovision—'}</td><td>0.304997140665</td></tr>
+                <tr><td>30</td><td>21</td><td>33</td><td>26</td><td>{'lehava', 'tunnel', 'adl', 'sitta', 'irac', 'silenc', 'palestinian', 'israel’', 'israel', 'hama', 'twostat', 'abu', 'lieberman', 'isra', 'ya’alon', 'gopstein', 'chabon', 'jewish', 'detent', 'netanyahu', 'gaza'}</td><td>0.427960492511</td></tr>
               </tbody>
             </table>
           </div>
         </div>
+
         <div class="row">
           <div class="col-xs-12">
             <h3>Visualization of networks</h3>
             <ul>
-              <li>Node size = no of articles</li>
-              <li>Node label = Modularity label</li>
-              <li>The digit on the label indicates that the LCM topic is most similar to the existing modularity topic in the network, eg. 216.3 meaning this is the third time of modularity topic 216 to match LCM topic.</li>
+              <li>Node size = No of articles</li>
+              <li>Node label = Topic label</li>
             </ul>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-4">
-            <p>
-              <h5>Modularity</h5>
-              <ul>
-                <li>Filter: Giant Component</li>
-                <li>Node: 48</li>
-                <li>Edge: 364</li>
-              </ul>
-              <a href="msc_project/com_net.png" target="_blank">
-                <img src="msc_project/com_net.png" width="100%">
-              </a>
-            </p>
-          </div>
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <p>
               <h5>LDA</h5>
-              <ul>
-                <li>Filter: Giant Component</li>
-                <li>Node: 67</li>
-                <li>Edge: 289</li>
-              </ul>
-              <a href="msc_project/com_lda.png" target="_blank">
-                <img src="msc_project/com_lda.png" width="100%">
+              <a href="msc_project/com_lda_n.png" target="_blank">
+                <img src="msc_project/com_lda_n.png" width="100%">
               </a>
             </p>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <p>
-              <h5>LCM</h5>
-              <ul>
-                <li>Filter: Giant Component</li>
-                <li>Node: 48</li>
-                <li>Edge: 153</li>
-              </ul>
-              <a href="msc_project/com_cosine_lda.png" target="_blank">
-                <img src="msc_project/com_cosine_lda.png" width="100%">
+              <h5>Modularity</h5>
+              <a href="msc_project/com_net_n.png" target="_blank">
+                <img src="msc_project/com_net_n.png" width="100%">
               </a>
             </p>
           </div>
