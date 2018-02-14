@@ -29,7 +29,7 @@ $(function() {
                   "email":"patorn.u@gmail.com",
                   "name": "Patorn"
                 }],
-                "subject": "patorn.com Contact Form - Mandrill API: " + name,
+                "subject": "patorn.github.io Contact Form - Mandrill API: " + name,
                 "html": "You have received a new message from your website contact form.<br>Here are the details:<br>Name: " + name + "<br>Email: "+ email + "<br>Phone: " + phone + "<br>Message:<br>" + message
               }
             };
