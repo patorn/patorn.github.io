@@ -10143,7 +10143,8 @@ img::-moz-selection {
   }
 }
 header.masthead {
-  padding-top: 10.5rem;
+  margin-top: 5rem;
+  padding-top: 6.5rem;
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
@@ -10170,6 +10171,7 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead {
+    margin-top: 0;
     padding-top: 28rem;
     padding-bottom: 12.5rem;
   }
